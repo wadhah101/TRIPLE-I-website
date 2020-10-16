@@ -18,12 +18,6 @@
       "pre-commit": "yarn run type-check && yarn lint"
     }
   },
-  "lint-staged": {
-    "*.@(ts|tsx)": [
-      "yarn lint",
-      "yarn format"
-    ]
-  },
   "dependencies": {
     "next": "latest",
     "react": "^16.13.1",
