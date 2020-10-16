@@ -12,9 +12,7 @@ export const Home = (): JSX.Element => (
         Welcome to <a href="https://nextjs.org">Next.js!</a>
       </h1>
 
-      <p className="description">
-        Get started by editing <code>pages/index.tsx</code>
-      </p>
+      <p className="description">Tunisia Entrepreneurship Summit: Triple I</p>
 
       <button
         onClick={() => {
