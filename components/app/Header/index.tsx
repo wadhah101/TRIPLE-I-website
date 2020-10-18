@@ -81,6 +81,7 @@ const Logo = styled.a`
 const Inscription = styled.a`
   position: relative;
   font-size: 1rem;
+  font-weight: 400;
   letter-spacing: 0.12rem;
   transition: all ease 0.3s;
   text-transform: capitalize;
