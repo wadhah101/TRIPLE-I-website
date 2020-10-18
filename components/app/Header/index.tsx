@@ -57,8 +57,8 @@ const NavAnchor = styled.a`
   &.active {
     ::after {
       background: #daa520;
-      left: 0%;
-      width: 100%;
+      left: -0.25rem;
+      width: calc(100% + 0.5rem);
     }
   }
   box-sizing: border-box;

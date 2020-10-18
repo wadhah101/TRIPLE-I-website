@@ -21,7 +21,7 @@ const fonts = {
 }
 
 const dimension = {
-  header: { desktop: 4.25 },
+  header: { desktop: 4.5 },
 }
 
 export const defaultTheme = { dimension, breakpoints, colors, fonts }
