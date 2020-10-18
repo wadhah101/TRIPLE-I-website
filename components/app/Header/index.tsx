@@ -1,7 +1,10 @@
+import Link from 'next/link'
 import * as React from 'react'
 import styled from 'styled-components'
 import { inscriptionLink, navElements } from '../../../data/nav.data'
 import NavLink from '../../template/NavLink'
+import Img from 'react-optimized-image'
+import EventLogo from '../../../public/favicon.webp'
 import * as Template from '../../template/template'
 
 const StyledHeader = styled.header`
@@ -17,16 +20,8 @@ const StyledHeader = styled.header`
 `
 
 const Container = styled(Template.Container)`
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  justify-items: center;
+  display: flex;
   align-items: center;
-  *:first-child {
-    justify-self: start;
-  }
-  *:last-child {
-    justify-self: end;
-  }
 `
 const initWidth = 50
 
@@ -56,7 +51,7 @@ const NavAnchor = styled.a`
   &:hover,
   &.active {
     ::after {
-      background: #daa520;
+      background: ${({ theme }) => theme.colors.accent};
       left: -0.25rem;
       width: calc(100% + 0.5rem);
     }
@@ -68,29 +63,73 @@ const Nav = styled.nav`
   display: flex;
 `
 
-const Logo = styled.div``
-
-const Inscription = styled(NavAnchor)`
-  &::after {
-    left: 0;
-    width: 100%;
+const Logo = styled.a`
+  height: ${({ theme }) => theme.dimension.header.desktop}rem;
+  display: flex;
+  align-items: center;
+  margin-right: 1.75rem;
+  picture {
+    height: 60%;
+    img {
+      height: 100%;
+    }
   }
+`
+
+const Inscription = styled.a`
+  position: relative;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  transition: all ease 0.3s;
+
+  padding: 0.75rem 1rem;
+  &::after {
+    z-index: -1;
+    transition: all ease 0.3s;
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -5%;
+    width: 110%;
+    height: 0;
+    background: transparent;
+  }
+
+  &:hover {
+    color: white;
+    ::after {
+      background: ${({ theme }) => theme.colors.main};
+      height: 100%;
+    }
+  }
+`
+
+const Spacer = styled.div`
+  flex: 1 1 0;
 `
 
 const Header: React.FunctionComponent = () => {
   return (
     <StyledHeader>
       <Container>
+        <Link passHref href="/">
+          <Logo>
+            <Img src={EventLogo} />
+          </Logo>
+        </Link>
+
         <Nav>
-          {navElements.map((e) => (
-            <NavLink key={e.href} href={e.href}>
+          {navElements.map(({ href, name }) => (
+            <NavLink key={href} href={href}>
               <NavAnchor>
-                <span>{e.name}</span>
+                <span>{name}</span>
               </NavAnchor>
             </NavLink>
           ))}
         </Nav>
-        <Logo> Tiple I </Logo>
+
+        <Spacer />
+
         <NavLink href={inscriptionLink.href}>
           <Inscription>
             <span>{inscriptionLink.name}</span>

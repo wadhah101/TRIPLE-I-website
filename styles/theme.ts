@@ -9,11 +9,10 @@ const breakpoints = {
 }
 
 const colors = {
-  maximumBluePurple: '#c2aff0',
-  ieeeBlue: '#00a7e1',
-  alabaster: ' #e8eddf',
-  maizeCrayola: '#f5cb5c',
-  eerieBlack: '#242423',
+  main: '#006bbb',
+  mainLight: '#30a0e0',
+  accent: '#ffc872',
+  accentLight: '#ffe3b3',
 }
 const fonts = {
   casual: `'Poppins', sans-serif`,

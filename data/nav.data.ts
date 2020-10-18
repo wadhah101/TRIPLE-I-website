@@ -9,7 +9,7 @@ export const navElements: NavElement[] = [
   navFactory('/', 'home'),
   navFactory('/challenge', 'challenge'),
   navFactory('/access', 'event access'),
-  navFactory('/facts', 'did you know ?'),
+  navFactory('/facts', 'did you know'),
 ]
 
-export const inscriptionLink = navFactory('/inscription', 'inscription')
+export const inscriptionLink = navFactory('/inscription', 'join us')
