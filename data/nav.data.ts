@@ -3,7 +3,10 @@ export interface NavElement {
   name: string
 }
 
-const navFactory = (href: string, name: string): NavElement => ({ href, name })
+export const navFactory = (href: string, name: string): NavElement => ({
+  href,
+  name,
+})
 
 export const navElements: NavElement[] = [
   navFactory('/', 'home'),
