@@ -20,6 +20,7 @@
     "@analytics/google-analytics": "^0.5.2",
     "@types/styled-components": "^5.1.4",
     "analytics": "^0.5.5",
+    "clsx": "^1.1.1",
     "next": "latest",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^3.0.0-canary.10",

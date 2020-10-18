@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import * as React from 'react'
-import { headDescription } from '../../../data/description'
+
+const headDescription = `The Tunisia entrepreneurship summit is part of the IEEE Region8 Entrepreneurship initiative. This year it's in collaboration between IEEE INSAT Student Branch, and IEEE ENISO Student Branch, under the theme of "INDUSTRY,INNOVATION AND INFRASTRUCTURE".`
 
 const AppHead: React.FunctionComponent = () => {
   return (
@@ -13,4 +14,4 @@ const AppHead: React.FunctionComponent = () => {
   )
 }
 
-export default AppHead
+export default React.memo(AppHead)
