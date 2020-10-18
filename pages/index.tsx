@@ -2,6 +2,8 @@ import { NextPage } from 'next'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
+  position: relative;
+  z-index: 1;
   height: 100vh;
   background: #f7f7f5;
   padding-top: ${({ theme }) => theme.dimension.header.desktop}rem;

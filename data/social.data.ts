@@ -13,17 +13,17 @@ const socialElementFactory = (
 
 export const socialElements: SocialElement[] = [
   socialElementFactory(
-    fa.FaInstagram,
-    navFactory(
-      'https://www.instagram.com/tes_action_for_iii/',
-      'instagran page'
-    )
-  ),
-  socialElementFactory(
     fa.FaFacebookF,
     navFactory(
       'https://www.facebook.com/Tunisia-Entrepreneurship-Summit-Triple-I-112265417325918/',
       'facebook page'
+    )
+  ),
+  socialElementFactory(
+    fa.FaInstagram,
+    navFactory(
+      'https://www.instagram.com/tes_action_for_iii/',
+      'instagran page'
     )
   ),
 ]

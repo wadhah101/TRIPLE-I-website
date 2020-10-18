@@ -16,6 +16,7 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
 `
 
 const Container = styled(Template.Container)`
@@ -30,7 +31,7 @@ const NavAnchor = styled.a`
   height: ${({ theme }) => theme.dimension.header.desktop}rem;
   display: flex;
   align-items: center;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.08rem;
   font-weight: 500;
   &:not(:last-child) {
     margin-right: 1.5rem;
