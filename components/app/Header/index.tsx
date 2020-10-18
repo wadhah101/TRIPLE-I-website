@@ -49,6 +49,7 @@ const NavAnchor = styled.a`
 
   &:hover,
   &.active {
+    color: #121212;
     ::after {
       background: ${({ theme }) => theme.colors.accent};
       left: -0.25rem;
@@ -61,6 +62,7 @@ const NavAnchor = styled.a`
 const Nav = styled.nav`
   display: flex;
   text-transform: uppercase;
+  color: #5b5b5b;
 `
 
 const Logo = styled.a`
@@ -82,7 +84,7 @@ const Inscription = styled.a`
   letter-spacing: 0.12rem;
   transition: all ease 0.3s;
   text-transform: capitalize;
-
+  color: #121212;
   padding: 0.75rem 1rem;
   &::after {
     z-index: -1;
