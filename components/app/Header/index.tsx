@@ -9,7 +9,6 @@ import * as Template from '../../template/template'
 
 const StyledHeader = styled.header`
   background: white;
-  text-transform: uppercase;
   font-weight: 500;
   border-bottom: 1px solid #bfbfbf;
   font-size: 0.75rem;
@@ -61,6 +60,7 @@ const NavAnchor = styled.a`
 
 const Nav = styled.nav`
   display: flex;
+  text-transform: uppercase;
 `
 
 const Logo = styled.a`
@@ -78,9 +78,10 @@ const Logo = styled.a`
 
 const Inscription = styled.a`
   position: relative;
-  font-size: 0.8rem;
-  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  letter-spacing: 0.12rem;
   transition: all ease 0.3s;
+  text-transform: capitalize;
 
   padding: 0.75rem 1rem;
   &::after {
@@ -98,7 +99,7 @@ const Inscription = styled.a`
   &:hover {
     color: white;
     ::after {
-      background: ${({ theme }) => theme.colors.main};
+      background: ${({ theme: { colors } }) => colors.main};
       height: 100%;
     }
   }
