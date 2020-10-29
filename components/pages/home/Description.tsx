@@ -6,7 +6,6 @@ import Countdown from './Countdown'
 
 const Wrapper = styled.div`
   padding: 12vh 0;
-  width: 60%;
   ${up('md')} {
     width: 60%;
   }
@@ -14,14 +13,23 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h2`
+  text-align: center;
   font-weight: 700;
-  font-size: 4rem;
-  line-height: 130%;
+  font-size: 3rem;
+  line-height: 120%;
   text-transform: uppercase;
+
+  ${up('md')} {
+    font-size: 4rem;
+    line-height: 130%;
+  }
 `
 const Important = styled.span`
-  font-size: 7rem;
+  font-size: 3.5;
   color: ${({ theme }) => theme.colors.main};
+  ${up('md')} {
+    font-size: 7rem;
+  }
 `
 
 const Writing = styled.p`

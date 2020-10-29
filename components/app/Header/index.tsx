@@ -6,6 +6,8 @@ import NavLink from '../../template/NavLink'
 import * as Template from '../../template/template'
 import { NavAnchor } from './NavAnchor'
 import Image from 'next/image'
+import { up } from 'styled-breakpoints'
+import { FaBars } from 'react-icons/fa'
 
 const StyledHeader = styled.header`
   background: transparent;
@@ -13,7 +15,7 @@ const StyledHeader = styled.header`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 1000;
   color: #fff;
 `
@@ -24,10 +26,18 @@ const Container = styled(Template.Container)`
 `
 
 const Nav = styled.nav`
-  display: flex;
+  display: none;
   text-transform: uppercase;
+  ${up('md')} {
+    display: flex;
+  }
 `
-
+const Menu = styled.div`
+  ${up('md')} {
+    display: none;
+  }
+  font-size: 1.75rem;
+`
 const Logo = styled.a`
   display: flex;
   align-items: center;
@@ -59,6 +69,9 @@ const Header: React.FunctionComponent = () => {
             </NavLink>
           ))}
         </Nav>
+        <Menu>
+          <FaBars />
+        </Menu>
       </Container>
     </StyledHeader>
   )
