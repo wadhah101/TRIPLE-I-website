@@ -36,7 +36,7 @@ const Menu = styled.div`
   ${up('md')} {
     display: none;
   }
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 `
 const Logo = styled.a`
   display: flex;

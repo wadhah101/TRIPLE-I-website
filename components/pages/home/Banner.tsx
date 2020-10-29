@@ -49,7 +49,7 @@ const Bigger = styled.span`
   ${up('md')} {
     font-size: 6.5rem;
   }
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 110%;
 `
 
@@ -74,8 +74,8 @@ const Interact = styled.div`
     gap: 1.5rem;
   }
 `
-const Join = styled.a`
-  display: block;
+export const JoinButton = styled.a`
+  display: inline-block;
   font-weight: 500;
   letter-spacing: 1px;
   border-radius: 0.25rem;
@@ -106,9 +106,9 @@ const Banner: React.FunctionComponent = () => {
         <Subtitle> November 20-2020&nbsp;&nbsp;|&nbsp;&nbsp;online </Subtitle>
 
         <Interact>
-          <Join href="https://www.google.com/" target="_blank">
+          <JoinButton href="https://www.google.com/" target="_blank">
             SIGN UP
-          </Join>
+          </JoinButton>
           <Or> or </Or>
           <VideoButton>
             <FaYoutube /> Watch The Trailer

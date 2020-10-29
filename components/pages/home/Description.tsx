@@ -1,8 +1,11 @@
 import React from 'react'
-import { up } from 'styled-breakpoints'
+import { down, up } from 'styled-breakpoints'
 import styled from 'styled-components'
 import * as Template from '../../template/template'
+import { JoinButton } from './Banner'
 import Countdown from './Countdown'
+import { FiLink } from 'react-icons/fi'
+import Link from 'next/link'
 
 const Wrapper = styled.div`
   padding: 12vh 0;
@@ -16,7 +19,7 @@ const Title = styled.h2`
   text-align: center;
   font-weight: 700;
   font-size: 3rem;
-  line-height: 120%;
+  line-height: 135%;
   text-transform: uppercase;
 
   ${up('md')} {
@@ -25,7 +28,7 @@ const Title = styled.h2`
   }
 `
 const Important = styled.span`
-  font-size: 3.5;
+  font-size: 5.3rem;
   color: ${({ theme }) => theme.colors.main};
   ${up('md')} {
     font-size: 7rem;
@@ -35,6 +38,28 @@ const Important = styled.span`
 const Writing = styled.p`
   color: #00000080;
   line-height: 170%;
+`
+
+const BigJoinButton = styled(JoinButton)`
+  color: white;
+  text-align: center;
+  ${down('md')} {
+    width: 100%;
+  }
+`
+const ChallengeLink = styled.a`
+  display: grid;
+  align-items: center;
+  justify-content: start;
+  gap: 0.75rem;
+  grid-auto-flow: column dense;
+  font-size: 1.125rem;
+  transition: all ease 200ms;
+  &:hover {
+    color: ${({ theme }) => theme.colors.main};
+    text-decoration: underline;
+  }
+  margin: 1rem 0;
 `
 
 const Description: React.FunctionComponent = () => {
@@ -58,6 +83,13 @@ const Description: React.FunctionComponent = () => {
           nam sint? Natus ab ullam cumque ipsam quos laudantium tenetur velit
           debitis odio obcaecati, rerum nisi harum.
         </Writing>
+        <Link href="/challenge" passHref>
+          <ChallengeLink>
+            <FiLink /> check the challenge page for more info
+          </ChallengeLink>
+        </Link>
+
+        <BigJoinButton> JOIN US, FILL THE FORM !</BigJoinButton>
       </Wrapper>
     </Template.Container>
   )
