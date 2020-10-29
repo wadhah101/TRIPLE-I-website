@@ -30,23 +30,25 @@ const BiggerTitle = styled.span`
 const Info = styled.div``
 
 const SocialDiv = styled.div`
-  margin-left: 0.25rem;
   display: flex;
   align-items: center;
 `
 
 const SocialAnchor = styled.a`
-  border: 1px solid white;
-  padding: 0.75rem;
   font-size: 1.35rem;
+  margin-right: 1rem;
   transition: all ease 0.4s;
   &:not(:last-child) {
     border-right: none;
   }
-  &:hover {
-    color: #000;
-    background: white;
-  }
+`
+
+const Writing = styled.p`
+  color: #9b9b9b;
+  font-size: 0.75rem;
+`
+const WritingContainer = styled.div`
+  margin-top: 2rem;
 `
 
 const Footer: React.FC = () => {
@@ -71,6 +73,11 @@ const Footer: React.FC = () => {
               </SocialAnchor>
             ))}
           </SocialDiv>
+          <WritingContainer>
+            <Writing>
+              © 2020 IEEE INSAT , IEEE ENISO, Inc. All rights reserved.
+            </Writing>
+          </WritingContainer>
         </Info>
       </Container>
     </StyledFooter>

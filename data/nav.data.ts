@@ -15,4 +15,4 @@ export const navElements: NavElement[] = [
   navFactory('/facts', 'did you know'),
 ]
 
-export const inscriptionLink = navFactory('/inscription', 'inscription')
+export const inscriptionLink = navFactory('/inscription', 'join us')
