@@ -23,7 +23,7 @@ const Number = styled.p`
 
 const Text = styled.p``
 
-const NumberTransform = (n: number) => (n > 10 ? `${n}` : `0${n}`)
+const NumberTransform = (n: number) => (n >= 10 ? `${n}` : `0${n}`)
 
 const CountdownElement: React.FunctionComponent<Props> = ({ value, text }) => {
   return (
