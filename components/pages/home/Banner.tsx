@@ -91,7 +91,9 @@ const Banner: React.FunctionComponent = () => {
         <Subtitle> November 20-2020&nbsp;&nbsp;|&nbsp;&nbsp;online </Subtitle>
 
         <Interact>
-          <Join href="https://www.google.com/"> SIGN UP</Join>
+          <Join href="https://www.google.com/" target="_blank">
+            SIGN UP
+          </Join>
           <Or> or </Or>
           <VideoButton>
             <FaYoutube /> Watch The Trailer

@@ -10,5 +10,5 @@ export const Page = styled.div`
   position: relative;
   z-index: 1;
   min-height: 100vh;
-  background: #f7f7f5;
+  background: #fff;
 `
