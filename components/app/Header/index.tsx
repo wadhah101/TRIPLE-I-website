@@ -18,6 +18,7 @@ const StyledHeader = styled.header`
   width: 100%;
   z-index: 1000;
   color: #fff;
+  /* box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.1); */
 `
 
 const Container = styled(Template.Container)`
