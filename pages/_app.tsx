@@ -7,7 +7,6 @@ import { defaultAnalytics } from '../lib/analytics'
 import React from 'react'
 import AppHead from '../components/app/AppHead'
 import Header from '../components/app/Header'
-import Footer from '../components/app/Footer'
 
 const MyApp: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -17,7 +16,7 @@ const MyApp: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => {
         <GlobalStyles />
         <Header />
         <Component {...pageProps} />
-        <Footer />
+        {/* <Footer /> */}
       </ThemeProvider>
     </AnalyticsProvider>
   )

@@ -12,3 +12,11 @@ export const Page = styled.div`
   min-height: 100vh;
   background: #fff;
 `
+
+export const Title = styled.h2`
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+`

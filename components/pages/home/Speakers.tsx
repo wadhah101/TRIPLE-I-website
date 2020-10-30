@@ -23,17 +23,12 @@ const Container = styled(Template.Container)`
   padding-bottom: 12vh;
 `
 
-const Title = styled.h2`
-  font-size: 4rem;
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-`
+const Title = styled(Template.Title)``
 
 const ImageGrid = styled.div`
   display: grid;
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 3rem;
   ${up('md')} {
     grid-template-columns: repeat(3, 1fr);
     padding: 0 2rem;
@@ -107,7 +102,7 @@ const Speakers: React.FunctionComponent = () => {
                 <a href={e.social.linkedin} rel="noreferrer" target="_blank">
                   <FaLinkedin />
                 </a>
-                <a href={e.social.linkedin} rel="noreferrer" target="_blank">
+                <a href={e.social.fb} rel="noreferrer" target="_blank">
                   <FaFacebookF />
                 </a>
               </ElementSocial>

@@ -34,10 +34,13 @@ const Element = styled.div<{ url: string }>`
     content: '';
     background: #00000080;
   }
+  width: 100%;
 `
 
 const ElementWriting = styled.div`
   padding: 8rem 2rem;
+  width: 100%;
+
   position: relative;
   z-index: 3;
   display: grid;
@@ -51,7 +54,7 @@ const ElementWriting = styled.div`
   }
 
   h3::first-letter {
-    font-size: 4rem;
+    /* font-size: 4rem; */
     color: ${({ theme }) => theme.colors.mainLight};
   }
 `
