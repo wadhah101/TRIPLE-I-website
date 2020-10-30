@@ -6,10 +6,10 @@ export const navAnchorInit = css`
   transition: all ease 0.3s;
   content: '';
   position: absolute;
-  bottom: -1px;
+  bottom: 0px;
   left: ${(100 - initWidth) / 2}%;
   width: ${initWidth}%;
-  height: 3px;
+  height: 4px;
   background: transparent;
 `
 

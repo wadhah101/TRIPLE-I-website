@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import * as React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { navElements } from '../../../data/nav.data'
 import NavLink from '../../template/NavLink'
 import * as Template from '../../template/template'
@@ -9,7 +9,13 @@ import Image from 'next/image'
 import { up } from 'styled-breakpoints'
 import { FaBars } from 'react-icons/fa'
 
-const StyledHeader = styled.header`
+const whiteMode = css`
+  background: #000000dd;
+  padding: 0;
+  position: fixed;
+`
+
+const BaseHeader = styled.header`
   background: transparent;
   padding: 1rem 0;
   position: absolute;
@@ -18,7 +24,11 @@ const StyledHeader = styled.header`
   width: 100%;
   z-index: 1000;
   color: #fff;
-  /* box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.1); */
+  transition: all ease 0.5s;
+`
+
+const AdaptiveHeader = styled(BaseHeader)<{ white: boolean }>`
+  ${({ white }) => (white ? whiteMode : null)};
 `
 
 const Container = styled(Template.Container)`
@@ -52,8 +62,35 @@ const Spacer = styled.div`
 `
 
 const Header: React.FunctionComponent = () => {
+  const [white, setWhite] = React.useState(false)
+
+  React.useEffect(() => {
+    let last_known_scroll_position = 0
+    let ticking = false
+    const tripping = window.innerHeight * 0.75
+
+    function doSomething(scroll_pos: number) {
+      if (scroll_pos > tripping && !white) {
+        setWhite(true)
+      } else if (scroll_pos <= tripping && white) {
+        setWhite(false)
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      last_known_scroll_position = window.scrollY
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          doSomething(last_known_scroll_position)
+          ticking = false
+        })
+        ticking = true
+      }
+    })
+  }, [white])
+
   return (
-    <StyledHeader>
+    <AdaptiveHeader white={white}>
       <Container>
         <Link passHref href="/">
           <Logo>
@@ -74,7 +111,7 @@ const Header: React.FunctionComponent = () => {
           <FaBars />
         </Menu>
       </Container>
-    </StyledHeader>
+    </AdaptiveHeader>
   )
 }
 
