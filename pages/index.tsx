@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import React from 'react'
 import Banner from '../components/pages/home/Banner'
 import Description from '../components/pages/home/Description'
+import Speakers from '../components/pages/home/Speakers'
 import Standing from '../components/pages/home/Standing'
 // import PictureSeparator from '../components/pages/home/PictureSeparator'
 import BasePage from '../components/shared/BasePage'
@@ -14,6 +15,7 @@ export const Home: NextPage = () => {
       <Banner />
       <Description />
       <Standing />
+      <Speakers />
       {/* <PictureSeparator pictures={p1} /> */}
     </BasePage>
   )
