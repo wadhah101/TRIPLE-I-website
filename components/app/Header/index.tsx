@@ -11,8 +11,11 @@ import { FaBars } from 'react-icons/fa'
 
 const whiteMode = css`
   background: #000000dd;
-  padding: 0;
+  padding: 0.75rem 0;
   position: fixed;
+  ${up('md')} {
+    padding: 0;
+  }
 `
 
 const BaseHeader = styled.header`
