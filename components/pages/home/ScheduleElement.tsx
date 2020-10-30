@@ -6,7 +6,6 @@ export interface IScheduleElement {
   date: dayjs.Dayjs
   title: string
   text: string
-  image: string
 }
 
 const Container = styled.div``
@@ -15,12 +14,11 @@ const ScheduleElement: React.FunctionComponent<IScheduleElement> = ({
   date,
   title,
   text,
-  image,
 }) => {
   return (
     <Container>
       <p>
-        {date.toJSON()} {title} {text} {image}
+        {date.toJSON()} {title} {text}
       </p>
     </Container>
   )

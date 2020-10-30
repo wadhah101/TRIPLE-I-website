@@ -8,7 +8,6 @@ const element: IScheduleElement = {
   date: dayjs('2020-11-15'),
   title: '',
   text: '',
-  image: '',
 }
 
 const arr = new Array<IScheduleElement>(6)
