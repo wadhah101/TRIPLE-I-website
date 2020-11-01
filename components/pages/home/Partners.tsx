@@ -21,8 +21,8 @@ const Sponsors: React.FunctionComponent = () => {
   return (
     <Wrapper>
       <Container>
-        <Subtitle> MADE POSSIBLE THANKS TO OUR </Subtitle>
-        <Title> SPONSORS </Title>
+        <Subtitle> SPECIAL THANKS TO OUR </Subtitle>
+        <Title> PARTNERS </Title>
       </Container>
     </Wrapper>
   )

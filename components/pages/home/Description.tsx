@@ -36,8 +36,10 @@ const Important = styled.span`
 `
 
 const Writing = styled.p`
-  color: #00000080;
+  color: #000000a0;
   line-height: 170%;
+  margin-top: 0.75rem;
+  /* font-weight: 500; */
 `
 
 const BigJoinButton = styled(JoinButton)`
@@ -62,6 +64,11 @@ const ChallengeLink = styled.a`
   margin: 1rem 0;
 `
 
+const StrongMain = styled.strong`
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.mainLight};
+`
+
 const Description: React.FunctionComponent = () => {
   return (
     <Template.Container>
@@ -71,17 +78,37 @@ const Description: React.FunctionComponent = () => {
         </Title>
         <Countdown />
         <Writing>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-          est beatae, nobis reiciendis dolor delectus rem tenetur, aliquid ipsam
-          tempore explicabo praesentium mollitia cum. Nam modi architecto ipsa
-          illum, id quod accusamus quo delectus nobis nihil voluptas, odio
-          aliquid ex sequi animi iste exercitationem omnis debitis dolorem a?
-          Ipsam cumque nihil architecto consequatur? Atque aut porro officiis
-          perferendis exercitationem nobis saepe consequatur iste ratione
-          delectus doloremque eum voluptatem culpa dolor optio, expedita officia
-          sequi voluptate, soluta eveniet sit quis debitis. Beatae facere dicta
-          nam sint? Natus ab ullam cumque ipsam quos laudantium tenetur velit
-          debitis odio obcaecati, rerum nisi harum.
+          Getting into the entrepreneurial world is a risky adventure full of
+          difficulties, especially for young entrepreneurs lacking technical
+          skills, business intelligence and funds. Therefore, highlighting its
+          motto&nbsp;
+          <StrongMain>&quot;Advancing Technology For Humanity&quot;</StrongMain>
+          , IEEE R8 organization launched a very promising initiative known as
+          the IEEE R8 Entrepreneurship Initiative, aiming at strengthening the
+          knowledge of young entrepreneurs and exposing them to the IEEE wide
+          network. In order to reach this goal, IEEE R8 is relying on its very
+          unique and strong entrepreneurship ecosystem consisting of a variety
+          of technical foundations and organizational units. The IEEE R8
+          entrepreneurship initiative was the best chance for us as youth to
+          make a change and that’s why we decided to organize the&nbsp;
+          <StrongMain>
+            “Tunisia Entrepreneurship Summit: Industry innovation and
+            Infrastructure (3I) ”
+          </StrongMain>
+          &nbsp; It will be a two-day summit which encompasses various panel
+          sessions, workshops and mentorship for the future entrepreneurs about
+          the technical and soft skills needed to build a business and to make
+          their ideas get developed and see the light, and also a pitch
+          competition for teams with innovation, startups and small business
+          owners.
+        </Writing>
+        <Writing>
+          The event will be held in the entrepreneurship week along with other
+          similar event(s) from this initiative since we believe that we need to
+          cover all the Tunisian territory and we want the participants to have
+          various themes for the competition. There will be 3 winners from the
+          competition who will be selected to participate in the YP summit to
+          pitch their ideas.
         </Writing>
         <Link href="/challenge" passHref>
           <ChallengeLink>

@@ -20,7 +20,9 @@ const Wrapper = styled.section`
 
 const Container = styled(Template.Container)``
 
-const Title = styled(Template.Title)``
+const Title = styled(Template.Title)`
+  line-height: 130%;
+`
 
 const Grid = styled.ul`
   display: grid;
@@ -37,7 +39,7 @@ const Element = styled.li`
     font-weight: 700;
     color: ${({ theme }) => theme.colors.mainLight};
     font-size: 2.25rem;
-    line-height: 115%;
+    line-height: 110%;
     margin-bottom: 1rem;
   }
 `
@@ -46,7 +48,9 @@ const WhyUs: React.FunctionComponent = () => {
   return (
     <Wrapper>
       <Container>
-        <Title> why us ?</Title>
+        <Title>
+          why choose <span style={{ whiteSpace: 'nowrap' }}> us ? </span>{' '}
+        </Title>
         <Grid>
           {arr.map((e, ind) => (
             <Element key={ind}>

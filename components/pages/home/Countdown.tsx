@@ -16,7 +16,7 @@ const arr = [
 ]
 
 const Container = styled.div`
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   ${up('md')} {
     margin: 3rem 0;
   }
@@ -42,11 +42,11 @@ const dateDiffFactory = (current: dayjs.Dayjs, event: dayjs.Dayjs) => {
   const diff = dayjs.duration(event.diff(current))
   return [
     f(diff.weeks(), 'weeks'),
-    f(diff.days() - diff.weeks() * 7, 'days'),
+    f(diff.days() % 7, 'days'),
     f(diff.hours(), 'hours'),
     f(diff.minutes(), 'min'),
     f(diff.seconds(), 'sec'),
-  ]
+  ].map((e) => ({ ...e, value: Math.max(0, e.value) }))
 }
 
 const Countdown: React.FunctionComponent = () => {
@@ -54,7 +54,7 @@ const Countdown: React.FunctionComponent = () => {
 
   useEffect(() => {
     dayjs.extend(duration)
-    const event = dayjs('2020-11-20T16:00:00.000Z')
+    const event = dayjs('2020-11-21T16:00:00.000Z')
     const interval = setInterval(() => {
       const newArr = dateDiffFactory(dayjs(), event)
       setdata(newArr)
