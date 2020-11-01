@@ -43,7 +43,7 @@ const Day = styled.div`
       background: ${({ theme }) => theme.colors.main};
     }
   }
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   ${up('md')} {
     max-width: 50%;
   }

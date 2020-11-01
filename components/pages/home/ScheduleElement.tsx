@@ -14,7 +14,6 @@ const Container = styled.li`
   ${up('md')} {
     grid-template-columns: 2fr 8fr;
   }
-  row-gap: 0.5rem;
   padding-bottom: 1.5rem;
   &:not(:last-child) {
     border-bottom: 1px solid #00000020;
