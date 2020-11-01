@@ -7,7 +7,7 @@ import Countdown from './Countdown'
 import { FiLink } from 'react-icons/fi'
 import Link from 'next/link'
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   padding: 12vh 0;
   ${up('md')} {
     width: 60%;

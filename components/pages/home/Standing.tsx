@@ -11,7 +11,7 @@ const arr = [
   { name: 'infrastructure', text: placeholder, image: '/home/infra.webp' },
 ]
 
-const Container = styled.div`
+const Container = styled.section`
   color: #fff;
 `
 

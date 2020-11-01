@@ -4,7 +4,7 @@ import * as Template from '../../template/template'
 import { FaYoutube } from 'react-icons/fa'
 import { up } from 'styled-breakpoints'
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   position: relative;
   color: white;
   justify-content: center;

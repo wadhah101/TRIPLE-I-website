@@ -6,7 +6,7 @@ interface IPictureSeparatorProps {
   pictures: string[]
 }
 
-const Container = styled.div<{ count: number }>`
+const Container = styled.section<{ count: number }>`
   display: flex;
   > * {
     flex-grow: 1;

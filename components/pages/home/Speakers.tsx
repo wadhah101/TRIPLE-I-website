@@ -91,7 +91,7 @@ const ElementSocial = styled.div`
 
 const Speakers: React.FunctionComponent = () => {
   return (
-    <Container>
+    <Container as="section">
       <Title> speakers </Title>
       <ImageGrid>
         {arr.map((e) => (
