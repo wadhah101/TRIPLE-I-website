@@ -23,3 +23,5 @@ const MyApp: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => {
 }
 
 export default MyApp
+
+export const lorem = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quaerat in iste ad sit odit alias fugiat cum doloribus aperiam, unde numquam quod laboriosam. Ex provident nemo modi magni necessitatibus?`

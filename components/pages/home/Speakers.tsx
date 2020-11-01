@@ -41,9 +41,12 @@ const Element = styled.div`
     margin-top: 1rem;
     font-size: 2.25rem;
     font-weight: 600;
+    text-transform: uppercase;
     line-height: 95%;
   }
   p {
+    font-weight: 500;
+
     color: #00000080;
   }
 

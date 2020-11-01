@@ -14,8 +14,7 @@ const element: IScheduleElement = {
 const arr = new Array<IScheduleElement>(4).fill(element)
 
 const Container = styled(Template.Container)`
-  ${up('md')} {
-  }
+  padding-bottom: 12vh;
 `
 
 const Title = styled(Template.Title)``
@@ -55,7 +54,7 @@ const Day = styled.div`
 
 const Schedule: React.FunctionComponent = () => {
   return (
-    <Container>
+    <Container as="section">
       <div>
         <Title> Schedule </Title>
         <Day>
