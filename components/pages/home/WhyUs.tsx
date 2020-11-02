@@ -18,8 +18,6 @@ const Wrapper = styled.section`
   text-align: center;
 `
 
-const Container = styled(Template.Container)``
-
 const Title = styled(Template.Title)`
   line-height: 130%;
 `
@@ -47,18 +45,18 @@ const Element = styled.li`
 const WhyUs: React.FunctionComponent = () => {
   return (
     <Wrapper>
-      <Container>
+      <Template.Container>
         <Title>
           why choose <span style={{ whiteSpace: 'nowrap' }}> us ? </span>{' '}
         </Title>
         <Grid>
           {arr.map((e, ind) => (
             <Element key={ind}>
-              <h3> {e.title} </h3> <p> {e.text} </p>{' '}
+              <h3> {e.title} </h3> <p> {e.text} </p>
             </Element>
           ))}
         </Grid>
-      </Container>
+      </Template.Container>
     </Wrapper>
   )
 }

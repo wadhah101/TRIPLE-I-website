@@ -116,7 +116,13 @@ const Description: React.FunctionComponent = () => {
           </ChallengeLink>
         </Link>
 
-        <BigJoinButton> JOIN US, FILL THE FORM !</BigJoinButton>
+        <BigJoinButton
+          href="https://www.google.com/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          JOIN US, FILL THE FORM !
+        </BigJoinButton>
       </Wrapper>
     </Template.Container>
   )

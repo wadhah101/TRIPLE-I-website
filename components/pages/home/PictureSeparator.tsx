@@ -27,7 +27,7 @@ const PictureSeparator: React.FunctionComponent<IPictureSeparatorProps> = ({
   return (
     <Container count={pictures.length}>
       {pictures.map((e) => (
-        <StyledImage src={e} key={e} />
+        <StyledImage alt={e} src={e} key={e} />
       ))}
     </Container>
   )

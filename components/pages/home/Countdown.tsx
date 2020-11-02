@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import CountdownElement from './CountdownElement'
 import duration from 'dayjs/plugin/duration'
-import dayjs from 'dayjs'
+import dayjs, { Dayjs } from 'dayjs'
 import { down, up } from 'styled-breakpoints'
 
-const f = (value: number, text: string) => ({ value, text })
+const dataDay = (value: number, text: string) => ({ value, text })
 
 const arr = [
-  f(0, 'weeks'),
-  f(0, 'days'),
-  f(0, 'hours'),
-  f(0, 'min'),
-  f(0, 'sec'),
+  dataDay(0, 'weeks'),
+  dataDay(0, 'days'),
+  dataDay(0, 'hours'),
+  dataDay(0, 'min'),
+  dataDay(0, 'sec'),
 ]
 
 const Container = styled.div`
@@ -38,14 +38,14 @@ const ElementGrid = styled.div`
   }
 `
 
-const dateDiffFactory = (current: dayjs.Dayjs, event: dayjs.Dayjs) => {
+const dateDiffFactory = (current: Dayjs, event: Dayjs) => {
   const diff = dayjs.duration(event.diff(current))
   return [
-    f(diff.weeks(), 'weeks'),
-    f(diff.days() % 7, 'days'),
-    f(diff.hours(), 'hours'),
-    f(diff.minutes(), 'min'),
-    f(diff.seconds(), 'sec'),
+    dataDay(diff.weeks(), 'weeks'),
+    dataDay(diff.days() % 7, 'days'),
+    dataDay(diff.hours(), 'hours'),
+    dataDay(diff.minutes(), 'min'),
+    dataDay(diff.seconds(), 'sec'),
   ].map((e) => ({ ...e, value: Math.max(0, e.value) }))
 }
 

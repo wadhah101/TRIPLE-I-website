@@ -22,7 +22,7 @@ const mainArr = [
   { date: '22 november', data },
 ]
 
-const Grid = styled.li`
+const Grid = styled.ul`
   display: grid;
   gap: 2rem;
 `

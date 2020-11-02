@@ -2,6 +2,7 @@ import * as React from 'react'
 import { up } from 'styled-breakpoints'
 import styled from 'styled-components'
 import * as Template from '../../template/template'
+import Image from 'next/image'
 
 import { FaFacebookF, FaLinkedin } from 'react-icons/fa'
 
@@ -100,19 +101,34 @@ const Speakers: React.FunctionComponent = () => {
         {arr.map((e) => (
           <Element key={e.id}>
             <ElementImage>
-              <img src={e.picture} />
+              <Image
+                alt={`${e.firstName} ${e.lastName} picture`}
+                src={e.picture}
+                width={640}
+                height={640}
+              />
               <ElementSocial className="a">
-                <a href={e.social.linkedin} rel="noreferrer" target="_blank">
+                <a
+                  title="linkedin link"
+                  href={e.social.linkedin}
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <FaLinkedin />
                 </a>
-                <a href={e.social.fb} rel="noreferrer" target="_blank">
+                <a
+                  title="facebook link"
+                  href={e.social.fb}
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <FaFacebookF />
                 </a>
               </ElementSocial>
             </ElementImage>
-            <h4>
+            <h3>
               {e.firstName} <br /> {e.lastName}
-            </h4>
+            </h3>
             <p> {e.position} </p>
           </Element>
         ))}

@@ -97,7 +97,7 @@ const Header: React.FunctionComponent = () => {
       <Container>
         <Link passHref href="/">
           <Logo>
-            <Image unsized src="/favicon.webp" />
+            <Image alt="event icon" unsized src="/favicon.webp" />
           </Logo>
         </Link>
         <Spacer />

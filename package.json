@@ -10,6 +10,7 @@
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "static": "next build && next export",
+    "prod": "next build && next start",
     "lint": "eslint . --ext ts --ext tsx --ext js"
   },
   "husky": {
@@ -26,6 +27,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",
+    "sass": "^1.28.0",
     "styled-breakpoints": "^8.1.2",
     "styled-components": "^5.2.0",
     "use-analytics": "^0.0.5"

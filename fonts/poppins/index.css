@@ -2,6 +2,7 @@
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
+  font-display: swap;
   font-weight: 400;
   src: local('Poppins Regular'), local('Poppins-Regular'),
     url('./poppins-v13-latin-regular.woff2') format('woff2'),
