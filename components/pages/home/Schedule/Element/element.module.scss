@@ -1,0 +1,22 @@
+@import '../.../../../../../../styles/scss/shared.scss';
+.container {
+    display: grid;
+    padding-bottom: 1.5rem;
+    &:not(:last-child) {
+      border-bottom: 1px solid #00000020;
+    }
+    h4 {
+      text-transform: capitalize;
+      font-size: 1.5rem;
+      color: #000000d0;
+      line-height: 125%;
+      font-weight: 700;
+  
+      @include md {
+        max-width: 70%;
+      }
+    }
+    p {
+      color: #00000080;
+    }
+}

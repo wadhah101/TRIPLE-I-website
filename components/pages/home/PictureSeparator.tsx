@@ -6,7 +6,7 @@ interface IPictureSeparatorProps {
   pictures: string[]
 }
 
-const Container = styled.section<{ count: number }>`
+const Container = styled.section`
   display: flex;
   > * {
     flex-grow: 1;
@@ -25,7 +25,7 @@ const PictureSeparator: React.FunctionComponent<IPictureSeparatorProps> = ({
   pictures,
 }) => {
   return (
-    <Container count={pictures.length}>
+    <Container>
       {pictures.map((e) => (
         <StyledImage alt={e} src={e} key={e} />
       ))}

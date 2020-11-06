@@ -1,0 +1,73 @@
+@import '../../../../styles/scss/shared.scss';
+
+.container {
+  @extend .baseContainer;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+}
+
+.imageGrid {
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 3rem;
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 2rem;
+  }
+}
+
+.el {
+  display: grid;
+  h3 {
+    margin-top: 1rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 95%;
+  }
+  p {
+    font-weight: 500;
+
+    color: #00000080;
+  }
+
+  &:hover .elSocial {
+    transform: translateY(0);
+  }
+
+  &:hover img {
+    filter: grayscale(0);
+  }
+}
+
+.elImage {
+  position: relative;
+  overflow: hidden;
+  img {
+    position: relative;
+    z-index: 3;
+    transition: all ease 0.3s;
+    width: 100%;
+    filter: grayscale(1);
+  }
+}
+
+.elSocial {
+  position: absolute;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  background: #00000080;
+  padding: 1rem 0;
+  z-index: 5;
+  transition: transform ease-in-out 0.2s;
+  grid-auto-flow: column dense;
+  font-size: 1.5rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  @include md {
+    transform: translateY(100%);
+  }
+}

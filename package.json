@@ -46,6 +46,7 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.5.0",
     "prettier": "^2.0.2",
-    "typescript": "^4.0.5"
+    "typescript": "^4.0.5",
+    "typescript-plugin-css-modules": "^2.8.0"
   }
 }

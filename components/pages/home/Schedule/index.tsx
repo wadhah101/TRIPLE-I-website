@@ -1,7 +1,7 @@
 import * as React from 'react'
-import styled from 'styled-components'
-import ScheduleElement, { IScheduleElement } from './ScheduleElement'
-import * as Template from '../../template/template'
+import ScheduleElement, { IScheduleElement } from './Element'
+import * as Template from '../../../template/template'
+import styles from './schedule.module.scss'
 
 const element: IScheduleElement = {
   title: 'Kick start your career with IEEE INSAT',
@@ -9,10 +9,6 @@ const element: IScheduleElement = {
 }
 
 const data = new Array<IScheduleElement>(4).fill(element)
-
-const Container = styled(Template.Container)`
-  padding-bottom: 12vh;
-`
 
 const mainArr = [
   { date: '25 october - 08 november', data },
@@ -22,50 +18,21 @@ const mainArr = [
   { date: '22 november', data },
 ]
 
-const Grid = styled.ul`
-  display: grid;
-  gap: 2rem;
-`
-
-const Day = styled.h3`
-  display: inline-block;
-  position: relative;
-  font-size: 1.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
-  &::before {
-    position: absolute;
-    bottom: -2px;
-    content: '';
-    width: calc(100% + 2rem);
-    height: 0.5rem;
-    background: ${({ theme }) => theme.colors.main};
-  }
-`
-
-const Element = styled.div`
-  &:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-`
-
 const Schedule: React.FunctionComponent = () => {
   return (
-    <Container as="section">
+    <section className={styles.container}>
       <Template.Title> Schedule </Template.Title>
       {mainArr.map(({ date, data }, id) => (
-        <Element key={id}>
-          <Day>{date}</Day>
-          <Grid>
+        <div className={styles.el} key={id}>
+          <h3 className={styles.day}>{date}</h3>
+          <ul className={styles.grid}>
             {data.map((e, ind) => (
               <ScheduleElement key={ind} {...e} />
             ))}
-          </Grid>
-        </Element>
+          </ul>
+        </div>
       ))}
-    </Container>
+    </section>
   )
 }
 

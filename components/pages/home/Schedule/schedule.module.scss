@@ -1,0 +1,34 @@
+@import '../../../../styles/scss/shared.scss';
+.day {
+  display: inline-block;
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  &::before {
+    position: absolute;
+    bottom: -2px;
+    content: '';
+    width: calc(100% + 2rem);
+    height: 0.5rem;
+    background: $main;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.el {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.container {
+  @extend .baseContainer;
+  padding-bottom: 12vh;
+}

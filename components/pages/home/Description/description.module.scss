@@ -1,0 +1,53 @@
+@import '/styles/scss/shared.scss';
+
+.wrapper {
+  padding: 12vh 0;
+  @include md {
+    width: 60%;
+  }
+  margin: auto;
+}
+.title {
+  @extend .baseTitle;
+  font-size: 3rem;
+  line-height: 135%;
+  margin-bottom: 0 rem;
+  @include md {
+    font-size: 4rem;
+    line-height: 130%;
+  }
+}
+
+.writing {
+  color: #000000a0;
+  line-height: 170%;
+  margin-top: 0.75rem;
+
+  strong {
+    font-weight: 600;
+    color: $main;
+  }
+}
+
+.important {
+  font-size: 5.3rem;
+  color: $main;
+  @include md {
+    font-size: 7rem;
+  }
+}
+
+.challengeLink {
+  display: grid;
+  align-items: center;
+  justify-content: start;
+  gap: 0.75rem;
+  grid-auto-flow: column dense;
+  font-size: 1.125rem;
+  transition: all ease 200ms;
+  &:hover {
+    color: $main;
+    text-decoration: underline;
+  }
+  margin: 1rem 0;
+}

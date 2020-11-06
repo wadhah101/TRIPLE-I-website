@@ -1,0 +1,13 @@
+@import '../../../../styles/scss/shared.scss';
+
+.wrapper {
+  width: 100%;
+  padding: 10vh 0;
+}
+
+.subtitle {
+  color: $mainLight;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: center;
+}

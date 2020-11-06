@@ -1,4 +1,4 @@
-@import '../../../../styles/scss/shared.scss';
+@import '../../../../styles/scss/shared';
 
 .wrapper {
   position: relative;
@@ -16,12 +16,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #00000050;
+    background: rgba($color: #000000, $alpha: 0.5);
   }
 }
 
 .title {
-  @media (min-width: $md) {
+  @include md {
     font-size: 4rem;
   }
   font-size: 1.5rem;
@@ -31,7 +31,7 @@
 }
 
 .bigger {
-  @media (min-width: $md) {
+  @include md {
     font-size: 6.5rem;
   }
   font-size: 3.5rem;
@@ -42,7 +42,7 @@
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   font-size: 1.125rem;
-  @media (min-width: $md) {
+  @include md {
     margin-top: 0.75rem;
     margin-bottom: 2rem;
     font-size: 1.5rem;
@@ -72,7 +72,7 @@
   align-items: center;
   grid-auto-flow: row dense;
   gap: 0.5rem;
-  @media (min-width: $md) {
+  @include md {
     grid-auto-flow: column dense;
     gap: 1.5rem;
   }
