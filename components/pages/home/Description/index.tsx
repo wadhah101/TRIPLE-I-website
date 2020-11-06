@@ -1,19 +1,8 @@
 import React from 'react'
-import { down } from 'styled-breakpoints'
-import styled from 'styled-components'
-import { JoinButton } from '../Banner'
 import Countdown from '../Countdown'
 import { FiLink } from 'react-icons/fi'
 import Link from 'next/link'
 import styles from './description.module.scss'
-
-const BigJoinButton = styled(JoinButton)`
-  color: white;
-  text-align: center;
-  ${down('md')} {
-    width: 100%;
-  }
-`
 
 const Description: React.FunctionComponent = () => {
   return (
@@ -62,13 +51,14 @@ const Description: React.FunctionComponent = () => {
           </a>
         </Link>
 
-        <BigJoinButton
+        <a
+          className={styles.bigJoinButton}
           href="https://www.google.com/"
           rel="noreferrer"
           target="_blank"
         >
           JOIN US, FILL THE FORM !
-        </BigJoinButton>
+        </a>
       </div>
     </section>
   )

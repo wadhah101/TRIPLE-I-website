@@ -1,0 +1,57 @@
+@import '../../../styles/scss/shared.scss';
+.header {
+  background: transparent;
+  padding: 1rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  color: #fff;
+  transition: all ease 0.5s;
+}
+
+header.white {
+  background: #000000dd;
+  padding: 0.75rem 0;
+  position: fixed;
+  @include md {
+    padding: 0;
+  }
+}
+
+.container {
+  @extend .baseContainer;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: none;
+  text-transform: uppercase;
+  grid-auto-flow: column dense;
+  gap: 1.5rem;
+  @include md {
+    display: grid;
+  }
+}
+
+.menu {
+  @include md {
+    display: none;
+  }
+  font-size: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 1.75rem;
+  img {
+    height: $headerDesktop - 1.5rem;
+  }
+}
+
+.spacer {
+  flex-grow: 1;
+}

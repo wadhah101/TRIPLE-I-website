@@ -1,0 +1,33 @@
+@import '../../../styles/scss/shared.scss';
+
+.navAnchor {
+  font-size: 1rem;
+  transition: all ease 0.3s;
+  position: relative;
+  display: block;
+  height: $headerDesktop;
+  display: flex;
+  letter-spacing: 1px;
+  align-items: center;
+  &:hover:not(.active) {
+    color: $accent;
+  }
+  box-sizing: border-box;
+}
+
+.navAnchor::after {
+  content: '';
+  position: absolute;
+  transition: all ease 0.3s;
+  bottom: 0px;
+  left: 25%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+}
+
+.navAnchor.active::after {
+  background: $accent;
+  left: -0.25rem;
+  width: calc(100% + 0.5rem);
+}

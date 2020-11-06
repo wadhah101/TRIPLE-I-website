@@ -51,3 +51,17 @@
   }
   margin: 1rem 0;
 }
+
+.bigJoinButton {
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 0.25rem;
+  padding: 1rem 1.5rem;
+  background: $main;
+  color: white;
+  text-align: center;
+  @include md {
+    width: 100%;
+  }
+}
