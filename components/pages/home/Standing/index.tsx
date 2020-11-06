@@ -16,7 +16,7 @@ const Element = styled.div<{ url: string }>`
 const Standing: React.FunctionComponent = () => {
   return (
     <section className={styles.container}>
-      <div className={styles.container}>
+      <div className={styles.grid}>
         {arr.map(({ name, text, image }) => (
           <Element className={styles.el} url={image} key={name}>
             <div className={styles.writing}>
