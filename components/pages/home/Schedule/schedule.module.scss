@@ -1,20 +1,13 @@
 @import '../../../../styles/scss/shared.scss';
-.day {
-  display: inline-block;
-  position: relative;
-  font-size: 2rem;
+.period {
+  font-size: 1.5rem;
+  color: $main;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
-  &::before {
-    position: absolute;
-    bottom: -2px;
-    content: '';
-    width: calc(100% + 2rem);
-    height: 0.5rem;
-    background: $main;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .grid {
@@ -23,12 +16,45 @@
 }
 
 .el {
-  &:not(:last-child) {
-    margin-bottom: 2rem;
+  padding: 5rem 0;
+  display: grid;
+  gap: 2rem;
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 100%;
+    @include md {
+      width: calc(100% + 2rem);
+    }
+    height: 0.75rem;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 107, 187, 1) 0%,
+      rgba(255, 200, 114, 1) 100%
+    );
   }
+  grid-template-columns: 2fr 10fr;
 }
 
 .container {
   @extend .baseContainer;
   padding-bottom: 12vh;
+}
+
+.arr {
+  display: grid;
+}
+
+.num {
+  font-size: 2.25rem;
+  line-height: 120%;
+}
+
+.daySeparator {
+  margin: 1.5rem 0;
+  width: 0.5rem;
+  flex: 1;
+  background: $main;
 }

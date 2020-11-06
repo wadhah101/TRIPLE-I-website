@@ -11,3 +11,28 @@
   font-size: 0.875rem;
   text-align: center;
 }
+
+.grid {
+  display: grid;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.el {
+  display: grid;
+  position: relative;
+  text-align: center;
+  h3 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 110%;
+    transition: color 0.3s ease;
+  }
+  &:hover h3 {
+    color: $mainLight;
+  }
+}
