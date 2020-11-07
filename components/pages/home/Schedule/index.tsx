@@ -9,7 +9,7 @@ const element: IScheduleElement = {
   text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum optio eius eveniet nihil at, eligendi quia blanditiis nam, libero corrupti ab quos. A eum dignissimos explicabo. Assumenda porro harum vero!`,
 }
 
-const data = new Array<IScheduleElement>(2).fill(element)
+const data = new Array<IScheduleElement>(4).fill(element)
 
 const mainArr = [
   {

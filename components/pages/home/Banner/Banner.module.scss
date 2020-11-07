@@ -51,7 +51,8 @@
 
 .videoButton {
   display: flex;
-  align-items: center;
+  text-align: center;
+  justify-content: center;
   svg {
     margin-right: 0.75rem;
     font-size: 2rem;
@@ -71,7 +72,7 @@
   display: grid;
   align-items: center;
   grid-auto-flow: row dense;
-  gap: 0.5rem;
+  gap: 0.75rem;
   @include md {
     grid-auto-flow: column dense;
     gap: 1.5rem;

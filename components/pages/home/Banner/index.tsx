@@ -1,8 +1,11 @@
 import * as React from 'react'
 import { FaYoutube } from 'react-icons/fa'
+import { appContext } from '../../../../pages/_app'
 import styles from './Banner.module.scss'
 
 const Banner: React.FunctionComponent = () => {
+  const { setVideoOpen } = React.useContext(appContext)
+
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>
@@ -24,7 +27,10 @@ const Banner: React.FunctionComponent = () => {
             CHECK THE CHALLENGE
           </a>
           <span> or </span>
-          <button className={styles.videoButton}>
+          <button
+            onClick={() => setVideoOpen(true)}
+            className={styles.videoButton}
+          >
             <FaYoutube /> Watch The Trailer
           </button>
         </div>

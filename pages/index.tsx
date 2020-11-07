@@ -8,10 +8,15 @@ import Partners from '../components/pages/home/Partner'
 import Standing from '../components/pages/home/Standing'
 import WhyUs from '../components/pages/home/WhyUs'
 import BasePage from '../components/shared/BasePage'
+import VideoPortal from '../components/pages/home/VideoPortal'
+import { appContext } from './_app'
 
 export const Home: NextPage = () => {
+  const { videoOpen } = React.useContext(appContext)
+
   return (
     <BasePage>
+      {videoOpen && <VideoPortal />}
       <Banner />
       <Description />
       <Standing />
@@ -19,7 +24,6 @@ export const Home: NextPage = () => {
       <Schedule />
       <WhyUs />
       <Partners />
-      {/* <PictureSeparator pictures={p1} /> */}
     </BasePage>
   )
 }

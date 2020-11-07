@@ -2,7 +2,6 @@ import Link from 'next/link'
 import * as React from 'react'
 import { navElements } from '../../../data/nav.data'
 import NavLink from '../../template/NavLink'
-import Image from 'next/image'
 import { FaBars } from 'react-icons/fa'
 import styles from './header.module.scss'
 import navStyles from './nav.anchor.module.scss'
@@ -41,7 +40,7 @@ const Header: React.FunctionComponent = () => {
       <div className={styles.container}>
         <Link passHref href="/">
           <a className={styles.logo}>
-            <Image alt="event icon" unsized src="/favicon.webp" />
+            <img alt="event icon" src="/favicon.webp" />
           </a>
         </Link>
         <div className={styles.spacer} />

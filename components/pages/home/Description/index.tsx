@@ -1,6 +1,5 @@
 import React from 'react'
 import Countdown from '../Countdown'
-import { FiLink } from 'react-icons/fi'
 import Link from 'next/link'
 import styles from './description.module.scss'
 
@@ -46,19 +45,8 @@ const Description: React.FunctionComponent = () => {
           pitch their ideas.
         </p>
         <Link href="/challenge" passHref>
-          <a className={styles.challengeLink}>
-            <FiLink /> check the challenge page for more info
-          </a>
+          <a className={styles.bigJoinButton}>JOIN US, FILL THE FORM !</a>
         </Link>
-
-        <a
-          className={styles.bigJoinButton}
-          href="https://www.google.com/"
-          rel="noreferrer"
-          target="_blank"
-        >
-          JOIN US, FILL THE FORM !
-        </a>
       </div>
     </section>
   )
