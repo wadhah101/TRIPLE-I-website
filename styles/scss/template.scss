@@ -11,3 +11,12 @@
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
+
+.imageGrid {
+  display: grid;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

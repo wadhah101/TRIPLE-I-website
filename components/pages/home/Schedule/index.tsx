@@ -9,15 +9,9 @@ const element: IScheduleElement = {
   text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum optio eius eveniet nihil at, eligendi quia blanditiis nam, libero corrupti ab quos. A eum dignissimos explicabo. Assumenda porro harum vero!`,
 }
 
-const data = new Array<IScheduleElement>(4).fill(element)
-
-//   '25 october - 08 november'
+const data = new Array<IScheduleElement>(2).fill(element)
 
 const mainArr = [
-  {
-    date: [dayjs('2018-10-25'), dayjs('2018-11-08')],
-    data,
-  },
   {
     date: [dayjs('2018-11-08'), dayjs('2018-11-10')],
     data,
@@ -50,7 +44,7 @@ const Schedule: React.FunctionComponent = () => {
                 </React.Fragment>
               ))}
             </h3>
-            <ul className={styles.grid}>
+            <ul className={styles.elsGrid}>
               {data.map((e, ind) => (
                 <ScheduleElement key={ind} {...e} />
               ))}

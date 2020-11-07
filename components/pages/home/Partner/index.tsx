@@ -15,7 +15,7 @@ const Partners: React.FunctionComponent = () => {
       <div className={styles.baseContainer}>
         <p className={styles.subtitle}> SPECIAL THANKS TO OUR </p>
         <h2 className={styles.baseTitle}> PARTNERS </h2>
-        <div className={styles.grid}>
+        <div className={styles.imageGrid}>
           {arr.map((e, ind) => (
             <a
               rel="noreferrer"

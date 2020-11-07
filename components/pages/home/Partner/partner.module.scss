@@ -12,15 +12,6 @@
   text-align: center;
 }
 
-.grid {
-  display: grid;
-  column-gap: 3rem;
-  row-gap: 2rem;
-  @include md {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .el {
   display: grid;
   position: relative;

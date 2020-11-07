@@ -21,7 +21,7 @@ const Banner: React.FunctionComponent = () => {
             rel="noreferrer"
             target="_blank"
           >
-            SIGN UP
+            CHECK THE CHALLENGE
           </a>
           <span> or </span>
           <button className={styles.videoButton}>

@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import * as React from 'react'
 import { lorem } from '../../../../pages/_app'
 import styles from './whyus.module.scss'
@@ -15,7 +16,7 @@ const WhyUs: React.FunctionComponent = () => {
         <h2 className={styles.title}>
           why choose <span style={{ whiteSpace: 'nowrap' }}> us ? </span>
         </h2>
-        <ul className={styles.grid}>
+        <ul className={clsx(styles.imageGrid, styles.s)}>
           {arr.map((e, ind) => (
             <li className={styles.el} key={ind}>
               <h3>

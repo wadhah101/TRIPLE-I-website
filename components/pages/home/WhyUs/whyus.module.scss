@@ -14,15 +14,6 @@
   margin-bottom: 2.5rem;
 }
 
-.grid {
-  display: grid;
-  column-gap: 2rem;
-  row-gap: 2rem;
-  @include md {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .el h3 {
   text-transform: uppercase;
   font-weight: 700;
@@ -30,4 +21,8 @@
   font-size: 1.75rem;
   line-height: 110%;
   margin-bottom: 1rem;
+}
+
+.s {
+  column-gap: 2rem;
 }

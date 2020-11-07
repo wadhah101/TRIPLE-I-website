@@ -6,12 +6,9 @@
   padding-bottom: 12vh;
 }
 
-.imageGrid {
-  display: grid;
-  column-gap: 2rem;
-  row-gap: 3rem;
+.paddedImageGrid {
+  @extend .imageGrid;
   @include md {
-    grid-template-columns: repeat(3, 1fr);
     padding: 0 2rem;
   }
 }

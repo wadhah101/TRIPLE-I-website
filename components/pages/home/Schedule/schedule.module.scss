@@ -9,17 +9,13 @@
   flex-direction: column;
   align-items: center;
 }
-
-.grid {
-  display: grid;
-  gap: 2rem;
-}
-
 .el {
-  padding: 5rem 0;
+  padding: 4rem 0;
   display: grid;
   gap: 2rem;
   position: relative;
+  align-content: start;
+
   &::after {
     position: absolute;
     top: 0;
@@ -28,14 +24,15 @@
     @include md {
       width: calc(100% + 2rem);
     }
-    height: 0.75rem;
-    background: linear-gradient(
-      90deg,
-      rgba(0, 107, 187, 1) 0%,
-      rgba(255, 200, 114, 1) 100%
-    );
+    height: 0.5rem;
+    background: linear-gradient(90deg, $main 0%, $accent 100%);
   }
   grid-template-columns: 2fr 10fr;
+  .elsGrid {
+    display: grid;
+    gap: 2rem;
+    align-content: start;
+  }
 }
 
 .container {
@@ -53,8 +50,9 @@
 }
 
 .daySeparator {
-  margin: 1.5rem 0;
-  width: 0.5rem;
+  margin: 0.5rem 0;
+  width: 0.25rem;
+  min-height: 2rem;
   flex: 1;
   background: $main;
 }
