@@ -1,12 +1,14 @@
 import '../styles/index.css'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
-import { defaultTheme, GlobalStyles } from '../styles/theme'
+import { defaultTheme } from '../styles/theme'
 import { AnalyticsProvider } from 'use-analytics'
 import { defaultAnalytics } from '../lib/analytics'
 import React, { createContext, useState } from 'react'
 import AppHead from '../components/app/AppHead'
 import Header from '../components/app/Header'
+
+import '../styles/scss/index.scss'
 
 interface IGlobalState {
   videoOpen: boolean
@@ -25,7 +27,6 @@ const MyApp: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => {
     <AnalyticsProvider instance={defaultAnalytics}>
       <ThemeProvider theme={defaultTheme}>
         <AppHead />
-        <GlobalStyles />
         <Header />
         <appContext.Provider value={{ videoOpen, setVideoOpen }}>
           <Component {...pageProps} />

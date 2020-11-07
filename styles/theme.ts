@@ -1,6 +1,3 @@
-import { up } from 'styled-breakpoints'
-import { createGlobalStyle } from 'styled-components'
-
 const breakpoints = {
   sm: '576px',
   md: '768px',
@@ -24,19 +21,3 @@ const dimension = {
 }
 
 export const defaultTheme = { dimension, breakpoints, colors, fonts }
-
-export const GlobalStyles = createGlobalStyle`
-
-html {       font-size: 16px;
-    }
-   ${up('md')} {
-     html {
-      font-size: 13px;
-     }
-   }
-   ${up('xl')} {
-     html {
-       font-size: 16px;
-     }
-   }
-`
