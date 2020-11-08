@@ -9,7 +9,8 @@
   display: flex;
   letter-spacing: 1px;
   align-items: center;
-  &:hover:not(.active) {
+  &:hover,
+  &.active {
     color: $accent;
   }
   box-sizing: border-box;

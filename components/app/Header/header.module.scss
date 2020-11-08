@@ -2,22 +2,26 @@
 .header {
   background: transparent;
   padding: 1rem 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 50;
   color: #fff;
   transition: all ease 0.5s;
+  @include md {
+    position: absolute;
+  }
 }
 
 header.white {
   background: #000000ee;
-  padding: 0.75rem 0;
   position: fixed;
   @include md {
     padding: 0;
   }
+  box-shadow: 0 4px 6px -1px rgba($color: white, $alpha: 0.1),
+    0 2px 4px -1px rgba($color: white, $alpha: 0.06);
 }
 
 .container {
@@ -36,17 +40,19 @@ header.white {
   }
 }
 
-.menu {
+.menuIcon {
   @include md {
     display: none;
   }
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  margin-right: 1.75rem;
+  @include md {
+    margin-right: 1.75rem;
+  }
   img {
     height: $headerDesktop - 1.5rem;
   }
@@ -54,4 +60,13 @@ header.white {
 
 .spacer {
   flex-grow: 1;
+}
+
+.navMobile {
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  display: grid;
+  @include md {
+    display: none;
+  }
 }

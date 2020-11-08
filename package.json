@@ -10,6 +10,7 @@
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "static": "next build && next export",
+    "serve": "serve -S out -l 3000",
     "prod": "next build && next start",
     "lint": "eslint . --ext ts --ext tsx --ext js"
   },
@@ -48,6 +49,7 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.5.1",
     "prettier": "^2.0.2",
+    "serve": "^11.3.2",
     "typescript": "^4.0.5",
     "typescript-plugin-css-modules": "^2.8.0"
   }
