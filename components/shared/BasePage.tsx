@@ -8,7 +8,7 @@ const BasePage: React.FunctionComponent<{
   analytics: { page: () => void }
 }> = ({ children, className, analytics: { page } }) => {
   React.useEffect(() => {
-    page()
+    if (window?.location?.hostname !== 'localhost') page()
   }, [])
   return <div className={clsx(className, styles.basePage)}> {children} </div>
 }
