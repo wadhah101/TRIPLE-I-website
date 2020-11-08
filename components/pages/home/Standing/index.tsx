@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { lorem } from '../../../../pages/_app'
+import { placeholder } from '../../../../pages/_app'
 import styles from './standing.module.scss'
 
 const arr = [
-  { name: 'innovation', text: lorem, image: '/home/innov.webp' },
-  { name: 'industry', text: lorem, image: '/home/industry.webp' },
-  { name: 'infrastructure', text: lorem, image: '/home/infra.webp' },
+  { name: 'innovation', text: placeholder, image: '/home/innov.webp' },
+  { name: 'industry', text: placeholder, image: '/home/industry.webp' },
+  { name: 'infrastructure', text: placeholder, image: '/home/infra.webp' },
 ]
 
 const Standing: React.FunctionComponent = () => {

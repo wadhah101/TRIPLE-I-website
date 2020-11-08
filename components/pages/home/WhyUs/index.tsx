@@ -1,12 +1,12 @@
 import clsx from 'clsx'
 import * as React from 'react'
-import { lorem } from '../../../../pages/_app'
+import { placeholder } from '../../../../pages/_app'
 import styles from './whyus.module.scss'
 
 const arr = [
-  { title: 'experience speaks', text: lorem },
-  { title: 'international reach', text: lorem },
-  { title: 'community driven', text: lorem },
+  { title: 'experience speaks', text: placeholder },
+  { title: 'international reach', text: placeholder },
+  { title: 'community driven', text: placeholder },
 ]
 
 const WhyUs: React.FunctionComponent = () => {

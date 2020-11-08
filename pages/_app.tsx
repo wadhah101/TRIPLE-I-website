@@ -9,6 +9,7 @@ import AppHead from '../components/app/AppHead'
 import Header from '../components/app/Header'
 
 import '../styles/scss/index.scss'
+import Footer from '../components/app/Footer'
 
 interface IGlobalState {
   videoOpen: boolean
@@ -31,7 +32,7 @@ const MyApp: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => {
         <appContext.Provider value={{ videoOpen, setVideoOpen }}>
           <Component {...pageProps} />
         </appContext.Provider>
-        {/* <Footer /> */}
+        <Footer />
       </ThemeProvider>
     </AnalyticsProvider>
   )
@@ -39,4 +40,4 @@ const MyApp: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => {
 
 export default MyApp
 
-export const lorem = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quaerat in iste ad sit odit alias fugiat cum doloribus aperiam, unde numquam quod laboriosam. Ex provident nemo modi magni necessitatibus?`
+export const placeholder = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quaerat in iste ad sit odit alias fugiat cum doloribus aperiam, unde numquam quod laboriosam. Ex provident nemo modi magni necessitatibus?`
