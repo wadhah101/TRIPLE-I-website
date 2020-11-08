@@ -38,11 +38,11 @@ const Partners: React.FunctionComponent = () => {
                 href={e.href}
                 className={styles.el}
                 key={ind}
+                title={e.name}
               >
                 <div className={styles.imgFilltoCenter}>
                   <img loading="lazy" alt={e.name} src={e.image} />
                 </div>
-                <h3> {e.name} </h3>
               </a>
             ))}
           </div>
@@ -63,6 +63,7 @@ const Partners: React.FunctionComponent = () => {
                 href={e.href}
                 className={styles.el}
                 key={ind}
+                title={e.name}
               >
                 <img loading="lazy" alt={e.name} src={e.image} />
                 <h3> {e.name} </h3>
