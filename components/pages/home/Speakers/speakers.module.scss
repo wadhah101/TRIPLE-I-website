@@ -46,7 +46,9 @@
     z-index: 3;
     transition: all ease 0.3s;
     width: 100%;
-    filter: grayscale(1);
+    @include md {
+      filter: grayscale(1);
+    }
   }
 }
 
