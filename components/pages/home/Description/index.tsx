@@ -2,8 +2,10 @@ import React from 'react'
 import Countdown from '../Countdown'
 import Link from 'next/link'
 import styles from './description.module.scss'
+import { useAnalytics } from 'use-analytics'
 
 const Description: React.FunctionComponent = () => {
+  const { track } = useAnalytics()
   return (
     <section className={styles.baseContainer}>
       <div className={styles.wrapper}>
@@ -45,7 +47,10 @@ const Description: React.FunctionComponent = () => {
           pitch their ideas.
         </p>
         <Link href="/challenge" passHref>
-          <a className={styles.bigJoinButton}>
+          <a
+            onClick={() => track('challenge page from description')}
+            className={styles.bigJoinButton}
+          >
             Check the challenge page for more details !
           </a>
         </Link>

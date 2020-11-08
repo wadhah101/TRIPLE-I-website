@@ -1,8 +1,11 @@
 import { socialElements } from '../../../data/social.data'
 import styles from './footer.module.scss'
 import * as fa from 'react-icons/fa'
+import { useAnalytics } from 'use-analytics'
 
 const Footer: React.FC = () => {
+  const { track } = useAnalytics()
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -15,7 +18,7 @@ const Footer: React.FC = () => {
         </div>
         <div style={{ flex: 1 }} />
         {/* questions , follow  */}
-        <div>
+        <div className={styles.right}>
           <h3 style={{ marginBottom: '0.5rem' }} className={styles.title}>
             follow us
           </h3>
@@ -28,6 +31,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 key={e.href}
+                onClick={() => track(`${e.name} click`)}
               >
                 <e.icon />
               </a>

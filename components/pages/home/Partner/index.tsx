@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styles from './partner.module.scss'
+import { useAnalytics } from 'use-analytics'
 
 const el = {
   name: 'IEEE TUNISIA SECTION',
@@ -23,6 +24,8 @@ const partners = new Array<typeof el>(3).fill(el)
 const commite = [insat, eniso]
 
 const Partners: React.FunctionComponent = () => {
+  const { track } = useAnalytics()
+
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>
@@ -39,6 +42,7 @@ const Partners: React.FunctionComponent = () => {
                 className={styles.el}
                 key={ind}
                 title={e.name}
+                onClick={() => track(`${e.name} link click`)}
               >
                 <div className={styles.imgFilltoCenter}>
                   <img loading="lazy" alt={e.name} src={e.image} />
@@ -64,6 +68,7 @@ const Partners: React.FunctionComponent = () => {
                 className={styles.el}
                 key={ind}
                 title={e.name}
+                onClick={() => track(`${e.name} link click`)}
               >
                 <img loading="lazy" alt={e.name} src={e.image} />
                 <h3> {e.name} </h3>

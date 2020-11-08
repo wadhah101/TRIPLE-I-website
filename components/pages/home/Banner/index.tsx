@@ -4,9 +4,12 @@ import { FaYoutube } from 'react-icons/fa'
 import { appContext } from '../../../../pages/_app'
 import BannerWithImage from '../../../template/BannerWithImage'
 import styles from './Banner.module.scss'
+import { useAnalytics } from 'use-analytics'
 
 const Banner: React.FunctionComponent = () => {
   const { setVideoOpen } = React.useContext(appContext)
+
+  const { track } = useAnalytics()
 
   return (
     <BannerWithImage as="section" imageUrl="/suit1.webp">
@@ -23,12 +26,20 @@ const Banner: React.FunctionComponent = () => {
 
         <div className={styles.interact}>
           <Link href="/challenge" passHref>
-            <a className={styles.joinButton}>CHECK THE CHALLENGE</a>
+            <a
+              onClick={() => track('challenge page from banner')}
+              className={styles.joinButton}
+            >
+              CHECK THE CHALLENGE
+            </a>
           </Link>
 
           <span> or </span>
           <button
-            onClick={() => setVideoOpen(true)}
+            onClick={() => {
+              setVideoOpen(true)
+              track('trailerClick')
+            }}
             className={styles.videoButton}
           >
             <FaYoutube /> Watch The Trailer

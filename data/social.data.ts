@@ -23,7 +23,7 @@ export const socialElements: SocialElement[] = [
     fa.FaInstagram,
     navFactory(
       'https://www.instagram.com/tes_action_for_iii/',
-      'instagran page'
+      'instagram page'
     )
   ),
 ]
