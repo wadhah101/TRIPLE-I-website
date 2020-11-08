@@ -8,13 +8,13 @@ const el = {
 }
 
 const eniso = {
-  name: 'IEEE ENISO student branch',
+  name: 'IEEE ENISO Student Branch',
   href: 'https://eniso.ieee.tn/',
   image: '/commite/eniso.webp',
 }
 
 const insat = {
-  name: 'IEEE INSAT student branch',
+  name: 'IEEE INSAT Student Branch',
   href: 'https://insat.ieee.tn/',
   image: '/commite/insat.webp',
 }

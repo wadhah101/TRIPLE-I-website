@@ -40,6 +40,8 @@
 
 .commite .imageGrid {
   @include md {
+    width: 75%;
+    margin: auto;
     grid-template-columns: 1fr 1fr;
   }
 }
