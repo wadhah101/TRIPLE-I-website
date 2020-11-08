@@ -14,7 +14,7 @@ const WhyUs: React.FunctionComponent = () => {
     <section className={styles.wrapper}>
       <div className={styles.baseContainer}>
         <h2 className={styles.title}>
-          why choose <span style={{ whiteSpace: 'nowrap' }}> us ? </span>
+          why <span style={{ whiteSpace: 'nowrap' }}> us ? </span>
         </h2>
         <ul className={clsx(styles.imageGrid, styles.s)}>
           {arr.map((e, ind) => (

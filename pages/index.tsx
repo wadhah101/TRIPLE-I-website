@@ -18,11 +18,10 @@ export const Home: NextPage = () => {
     <BasePage>
       {videoOpen && <VideoPortal />}
       <Banner />
-      <Description />
+      <Description /> <WhyUs />
       {/* <Standing /> */}
       <Speakers />
       <Schedule />
-      <WhyUs />
       <Partners />
     </BasePage>
   )

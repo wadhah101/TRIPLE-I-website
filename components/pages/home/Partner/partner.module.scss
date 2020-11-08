@@ -27,3 +27,41 @@
     color: $mainLight;
   }
 }
+
+.commite .imageGrid {
+  @include md {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.title {
+  @extend .baseTitle;
+  margin-bottom: 0.5rem;
+}
+
+.smallerTitle {
+  @extend .title;
+  font-size: 2.5rem;
+  @include md {
+    font-size: 3.5rem;
+  }
+}
+
+.separator {
+  background: rgba($color: #000000, $alpha: 0.5);
+  height: 0.25rem;
+  width: 100%;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+
+  @include md {
+    margin-top: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.container {
+  @extend .baseContainer;
+  display: flex;
+  flex-direction: column;
+}

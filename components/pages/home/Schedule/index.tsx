@@ -12,10 +12,6 @@ const data = new Array<IScheduleElement>(4).fill(element)
 
 const mainArr = [
   {
-    date: [dayjs('2018-11-08'), dayjs('2018-11-10')],
-    data,
-  },
-  {
     date: [dayjs('2018-11-14'), dayjs('2018-11-20')],
     data,
   },
@@ -25,32 +21,34 @@ const mainArr = [
 
 const Schedule: React.FunctionComponent = () => {
   return (
-    <section className={styles.container}>
-      <div className={styles.baseTitle}> Schedule </div>
-      <ul className={styles.arr}>
-        {mainArr.map(({ date, data }, id) => (
-          <li className={styles.el} key={id}>
-            <h3 className={styles.period}>
-              {date.map((e, ind) => (
-                <React.Fragment key={ind}>
-                  <div>
-                    <p className={styles.num}> {e.format('DD')} </p>
-                    <p> {e.format('MMMM')} </p>
-                  </div>
-                  {ind + 1 !== date.length && (
-                    <div className={styles.daySeparator} />
-                  )}
-                </React.Fragment>
-              ))}
-            </h3>
-            <ul className={styles.elsGrid}>
-              {data.map((e, ind) => (
-                <ScheduleElement key={ind} {...e} />
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+    <section className={styles.greyBg}>
+      <div className={styles.container}>
+        <h2 className={styles.baseTitle}> Schedule </h2>
+        <ul className={styles.arr}>
+          {mainArr.map(({ date, data }, id) => (
+            <li className={styles.el} key={id}>
+              <h3 className={styles.period}>
+                {date.map((e, ind) => (
+                  <React.Fragment key={ind}>
+                    <div>
+                      <p className={styles.num}> {e.format('DD')} </p>
+                      <p> {e.format('MMMM')} </p>
+                    </div>
+                    {ind + 1 !== date.length && (
+                      <div className={styles.daySeparator} />
+                    )}
+                  </React.Fragment>
+                ))}
+              </h3>
+              <ul className={styles.elsGrid}>
+                {data.map((e, ind) => (
+                  <ScheduleElement key={ind} {...e} />
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>{' '}
+      </div>
     </section>
   )
 }

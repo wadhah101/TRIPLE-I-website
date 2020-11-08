@@ -13,7 +13,10 @@ const Header: React.FunctionComponent = () => {
   React.useEffect(() => {
     let last_known_scroll_position = 0
     let ticking = false
-    const tripping = window.innerHeight * 0.75
+    const tripping =
+      window.innerWidth > 768
+        ? window.innerHeight * 0.75
+        : window.innerHeight * 0.5
 
     function doSomething(scroll_pos: number) {
       if (scroll_pos > tripping && !white) {

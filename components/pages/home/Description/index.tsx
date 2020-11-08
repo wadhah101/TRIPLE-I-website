@@ -46,7 +46,7 @@ const Description: React.FunctionComponent = () => {
         </p>
         <Link href="/challenge" passHref>
           <a className={styles.bigJoinButton}>
-            check the challenge page for more details !
+            Check the challenge page for more details !
           </a>
         </Link>
       </div>

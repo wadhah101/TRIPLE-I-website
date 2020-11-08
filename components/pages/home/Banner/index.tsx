@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import * as React from 'react'
 import { FaYoutube } from 'react-icons/fa'
 import { appContext } from '../../../../pages/_app'
@@ -13,19 +14,17 @@ const Banner: React.FunctionComponent = () => {
           TUNISIA ENTREPRENEURSHIP <br />
           SUMMIT :<br /> <span className={styles.bigger}>TRIPLE I</span>
         </h1>
+
         <h2 className={styles.subtitle}>
-          November 20-2020&nbsp;&nbsp;|&nbsp;&nbsp;online
+          Industry, Innovation & Infrastructure <br />
+          November 22-2020
         </h2>
 
         <div className={styles.interact}>
-          <a
-            className={styles.joinButton}
-            href="https://www.google.com/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            CHECK THE CHALLENGE
-          </a>
+          <Link href="/challenge" passHref>
+            <a className={styles.joinButton}>CHECK THE CHALLENGE</a>
+          </Link>
+
           <span> or </span>
           <button
             onClick={() => setVideoOpen(true)}
