@@ -23,6 +23,7 @@ const Footer: React.FC = () => {
           <div className={styles.social}>
             {socialElements.map((e) => (
               <a
+                title={e.name}
                 href={e.href}
                 target="_blank"
                 rel="noopener noreferrer"
