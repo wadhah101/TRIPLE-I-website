@@ -24,7 +24,7 @@ const Partners: React.FunctionComponent = () => {
               className={styles.el}
               key={ind}
             >
-              <img alt={e.name} src={e.image} />
+              <img loading="lazy" alt={e.name} src={e.image} />
               <h3> {e.name} </h3>
             </a>
           ))}

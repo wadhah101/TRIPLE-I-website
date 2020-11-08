@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Image from 'next/image'
 import styles from './speakers.module.scss'
 import { FaFacebookF, FaLinkedin } from 'react-icons/fa'
 
@@ -24,11 +23,10 @@ const Speakers: React.FunctionComponent = () => {
         {arr.map((e) => (
           <div className={styles.el} key={e.id}>
             <div className={styles.elImage}>
-              <Image
+              <img
+                loading="lazy"
                 alt={`${e.firstName} ${e.lastName} picture`}
                 src={e.picture}
-                width={640}
-                height={640}
               />
               <div className={styles.elSocial}>
                 <a
