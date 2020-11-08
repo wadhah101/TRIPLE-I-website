@@ -8,10 +8,10 @@ const Footer: React.FC = () => {
       <div className={styles.container}>
         <div>
           <h2 className={styles.title}>
-            Tunisia Entrepreneurship Summit :
+            Tunisia Entrepreneurship
+            <span style={{ whiteSpace: 'nowrap' }}> Summit : </span>
             <br /> <span className={styles.bigger}>Triple I</span>
           </h2>
-          <p className={styles.mail}>Setting standars for excelence </p>
         </div>
         <div style={{ flex: 1 }} />
         {/* questions , follow  */}
