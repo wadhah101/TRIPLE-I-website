@@ -2,18 +2,41 @@ import * as React from 'react'
 import styles from './speakers.module.scss'
 import { FaFacebookF, FaLinkedin } from 'react-icons/fa'
 
-const hiba = {
-  firstName: 'Hiba',
-  lastName: 'Mezni',
-  position: 'IEEE insat chair',
-  picture: '/speakers/hiba.jpg',
+const nader = {
+  firstName: 'Nader',
+  lastName: 'Zouaoui',
+  position:
+    'CoFounder of a freshly made startup “eDonec, For better Generations”',
+  picture: '/speakers/nader.webp',
   social: {
-    fb: 'https://www.facebook.com/hiba.mezni.98',
-    linkedin: 'https://www.linkedin.com/in/hiba-mezni-4821a8167/',
+    fb: 'https://www.facebook.com/Nader.Zouaoui1',
+    linkedin: 'https://www.linkedin.com/in/nader-zouaoui/',
   },
 }
 
-const arr = new Array<typeof hiba>(3).fill(hiba).map((e, id) => ({ ...e, id }))
+const ahlem = {
+  firstName: 'Ahlem',
+  lastName: 'Jedidi',
+  position: 'Co-Founder of The Women Entrepreneurship Institute',
+  picture: '/speakers/ahlem.webp',
+  social: {
+    fb: 'https://www.facebook.com/ahlem.jedidi',
+    linkedin: 'https://www.linkedin.com/in/jedidiahlem/',
+  },
+}
+
+const afef = {
+  firstName: 'Afef Bennani',
+  lastName: 'Ben Abdelghani',
+  position: 'Associate Professor (Maître de Conférences)',
+  picture: '/speakers/nader.webp',
+  social: {
+    fb: 'https://www.facebook.com/afef.bennani.7',
+    linkedin: 'https://www.linkedin.com/in/afef-bennani-ben-abdelghani/',
+  },
+}
+
+const arr = [nader, ahlem, afef]
 
 const Speakers: React.FunctionComponent = () => {
   return (
@@ -21,8 +44,8 @@ const Speakers: React.FunctionComponent = () => {
       <div className={styles.container}>
         <h2 className={styles.baseTitle}> speakers </h2>
         <div className={styles.imageGrid}>
-          {arr.map((e) => (
-            <div className={styles.el} key={e.id}>
+          {arr.map((e, ind) => (
+            <div className={styles.el} key={ind}>
               <div className={styles.elImage}>
                 <img
                   loading="lazy"

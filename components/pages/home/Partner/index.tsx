@@ -7,8 +7,20 @@ const el = {
   image: '/ieee-tunisia-section.jpg',
 }
 
+const eniso = {
+  name: 'IEEE ENISO student branch',
+  href: 'https://eniso.ieee.tn/',
+  image: '/commite/eniso.webp',
+}
+
+const insat = {
+  name: 'IEEE INSAT student branch',
+  href: 'https://insat.ieee.tn/',
+  image: '/commite/insat.webp',
+}
+
 const partners = new Array<typeof el>(3).fill(el)
-const commite = new Array<typeof el>(2).fill(el)
+const commite = [insat, eniso]
 
 const Partners: React.FunctionComponent = () => {
   return (
@@ -17,7 +29,7 @@ const Partners: React.FunctionComponent = () => {
         {/* commite */}
         <div className={styles.commite}>
           <p className={styles.subtitle}> BROUGHT TO YOU BY OUR </p>
-          <h2 className={styles.title}> COMMITE </h2>
+          <h2 className={styles.baseTitle}> COMMITES </h2>
           <div className={styles.imageGrid}>
             {commite.map((e, ind) => (
               <a
@@ -27,7 +39,9 @@ const Partners: React.FunctionComponent = () => {
                 className={styles.el}
                 key={ind}
               >
-                <img loading="lazy" alt={e.name} src={e.image} />
+                <div className={styles.imgFilltoCenter}>
+                  <img loading="lazy" alt={e.name} src={e.image} />
+                </div>
                 <h3> {e.name} </h3>
               </a>
             ))}
@@ -37,6 +51,7 @@ const Partners: React.FunctionComponent = () => {
         {/* commite */}
         <div className={styles.separator} />
         {/* partners */}
+
         <div>
           <p className={styles.subtitle}> SPECIAL THANKS TO OUR </p>
           <h2 className={styles.smallerTitle}> PARTNERS </h2>
@@ -53,7 +68,7 @@ const Partners: React.FunctionComponent = () => {
                 <h3> {e.name} </h3>
               </a>
             ))}
-          </div>{' '}
+          </div>
         </div>
 
         {/* partners */}
