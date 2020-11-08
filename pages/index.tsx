@@ -5,7 +5,7 @@ import Description from '../components/pages/home/Description'
 import Schedule from '../components/pages/home/Schedule'
 import Speakers from '../components/pages/home/Speakers'
 import Partners from '../components/pages/home/Partner'
-import Standing from '../components/pages/home/Standing'
+// import Standing from '../components/pages/home/Standing'
 import WhyUs from '../components/pages/home/WhyUs'
 import BasePage from '../components/shared/BasePage'
 import VideoPortal from '../components/pages/home/VideoPortal'
@@ -19,7 +19,7 @@ export const Home: NextPage = () => {
       {videoOpen && <VideoPortal />}
       <Banner />
       <Description />
-      <Standing />
+      {/* <Standing /> */}
       <Speakers />
       <Schedule />
       <WhyUs />

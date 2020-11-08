@@ -1,6 +1,5 @@
 import * as React from 'react'
 import ScheduleElement, { IScheduleElement } from './Element'
-import * as Template from '../../../template/template'
 import styles from './schedule.module.scss'
 import dayjs from 'dayjs'
 
@@ -27,7 +26,7 @@ const mainArr = [
 const Schedule: React.FunctionComponent = () => {
   return (
     <section className={styles.container}>
-      <Template.Title> Schedule </Template.Title>
+      <div className={styles.baseTitle}> Schedule </div>
       <ul className={styles.arr}>
         {mainArr.map(({ date, data }, id) => (
           <li className={styles.el} key={id}>

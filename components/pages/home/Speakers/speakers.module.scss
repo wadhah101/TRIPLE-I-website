@@ -17,7 +17,10 @@
   display: grid;
   h3 {
     margin-top: 1rem;
-    font-size: 2.25rem;
+    font-size: 1.75rem;
+    @include md {
+      font-size: 2.25rem;
+    }
     font-weight: 700;
     line-height: 95%;
   }
