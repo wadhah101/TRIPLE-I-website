@@ -1,6 +1,7 @@
 import * as React from 'react'
-import * as Template from '../template/template'
 import { withAnalytics } from 'use-analytics'
+import styles from './basePage.module.scss'
+import clsx from 'clsx'
 
 const BasePage: React.FunctionComponent<{
   className?: string
@@ -9,7 +10,7 @@ const BasePage: React.FunctionComponent<{
   React.useEffect(() => {
     page()
   }, [])
-  return <Template.Page className={className}> {children} </Template.Page>
+  return <div className={clsx(className, styles.basePage)}> {children} </div>
 }
 
 export default withAnalytics(BasePage)

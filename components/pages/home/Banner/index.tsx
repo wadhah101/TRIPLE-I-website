@@ -2,13 +2,14 @@ import Link from 'next/link'
 import * as React from 'react'
 import { FaYoutube } from 'react-icons/fa'
 import { appContext } from '../../../../pages/_app'
+import BannerWithImage from '../../../template/BannerWithImage'
 import styles from './Banner.module.scss'
 
 const Banner: React.FunctionComponent = () => {
   const { setVideoOpen } = React.useContext(appContext)
 
   return (
-    <section className={styles.wrapper}>
+    <BannerWithImage as="section" imageUrl="/suit1.webp">
       <div className={styles.container}>
         <h1 className={styles.title}>
           TUNISIA ENTREPRENEURSHIP <br />
@@ -34,7 +35,7 @@ const Banner: React.FunctionComponent = () => {
           </button>
         </div>
       </div>
-    </section>
+    </BannerWithImage>
   )
 }
 

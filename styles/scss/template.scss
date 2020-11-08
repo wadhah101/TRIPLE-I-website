@@ -29,3 +29,10 @@
 .greyBg {
   background: #f1f1f1;
 }
+
+.basePage {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  background: #fff;
+}

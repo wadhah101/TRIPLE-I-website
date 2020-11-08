@@ -1,28 +1,8 @@
 @import '../../../../styles/scss/shared';
 
-.wrapper {
-  position: relative;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  min-height: 100vh;
-  background: url('/suit1.webp') center center no-repeat;
-  background-attachment: fixed;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba($color: #000000, $alpha: 0.5);
-  }
-}
-
 .title {
   @include md {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   font-size: 1.5rem;
   line-height: 130%;
