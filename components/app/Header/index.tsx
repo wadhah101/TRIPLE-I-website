@@ -7,12 +7,17 @@ import navStyles from './nav.anchor.module.scss'
 import clsx from 'clsx'
 import * as fi from 'react-icons/fi'
 import { useOnClickOutside } from '../../../lib/onClickOutsideHook'
+import { useAnalytics } from 'use-analytics'
 
 const Header: React.FunctionComponent = () => {
+  const { track } = useAnalytics()
   const [white, setWhite] = React.useState(false)
   const [open, setOpen] = React.useState(false)
   const ref = React.useRef<HTMLTableHeaderCellElement>(null)
-  useOnClickOutside(ref, () => setOpen(false))
+  useOnClickOutside(ref, () => {
+    setOpen(false)
+    track('mobile menu auto close')
+  })
 
   React.useEffect(() => {
     let last_known_scroll_position = 0
@@ -63,7 +68,13 @@ const Header: React.FunctionComponent = () => {
             </NavLink>
           ))}
         </nav>
-        <div onClick={() => setOpen((e) => !e)} className={styles.menuIcon}>
+        <div
+          onClick={() => {
+            setOpen((e) => !e)
+            track(`mobile menu manual ${open ? 'open' : 'close'}`)
+          }}
+          className={styles.menuIcon}
+        >
           <fi.FiMenu />
         </div>
       </div>
