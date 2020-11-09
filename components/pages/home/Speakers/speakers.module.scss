@@ -14,7 +14,8 @@
 }
 
 .el {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   h3 {
     margin-top: 1rem;
     font-size: 1.75rem;

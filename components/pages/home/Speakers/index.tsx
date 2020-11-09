@@ -49,6 +49,7 @@ const Speakers: React.FunctionComponent = () => {
         <div className={styles.imageGrid}>
           {arr.map((e, ind) => (
             <div className={styles.el} key={ind}>
+              {/* images */}
               <div className={styles.elImage}>
                 <img
                   loading="lazy"
@@ -76,6 +77,7 @@ const Speakers: React.FunctionComponent = () => {
                   </a>
                 </div>
               </div>
+              {/* images */}
               <h3>
                 {e.firstName.toUpperCase()} <br /> {e.lastName.toUpperCase()}
               </h3>
