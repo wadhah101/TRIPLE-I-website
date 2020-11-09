@@ -1,0 +1,17 @@
+@import '../../../../styles/scss/shared.scss';
+@import '../../home/Partner/partner.module.scss';
+
+.writing {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.accent {
+  color: $main;
+}
+
+.reduced {
+  padding-top: 5rem;
+}

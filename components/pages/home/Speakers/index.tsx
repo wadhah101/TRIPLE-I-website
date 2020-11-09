@@ -45,7 +45,7 @@ const Speakers: React.FunctionComponent = () => {
   return (
     <section className={styles.greyBg}>
       <div className={styles.container}>
-        <h2 className={styles.baseTitle}> speakers </h2>
+        <h2 className={styles.title}> speakers </h2>
         <div className={styles.imageGrid}>
           {arr.map((e, ind) => (
             <div className={styles.el} key={ind}>

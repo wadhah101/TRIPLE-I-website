@@ -1,18 +1,15 @@
 import { NextPage } from 'next'
 import React from 'react'
-import styled from 'styled-components'
 import Banner from '../components/pages/challenge/Banner'
+import Goal from '../components/pages/challenge/Goal'
 import BasePage from '../components/shared/BasePage'
-
-const Page = styled(BasePage)`
-  background: #000000;
-`
 
 const challenge: NextPage = () => {
   return (
-    <Page>
+    <BasePage>
       <Banner />
-    </Page>
+      <Goal />
+    </BasePage>
   )
 }
 

@@ -10,6 +10,7 @@ import WhyUs from '../components/pages/home/WhyUs'
 import BasePage from '../components/shared/BasePage'
 import VideoPortal from '../components/pages/home/VideoPortal'
 import { appContext } from './_app'
+import Hosts from '../components/pages/challenge/Hosts'
 
 export const Home: NextPage = () => {
   const { videoOpen } = React.useContext(appContext)
@@ -18,8 +19,9 @@ export const Home: NextPage = () => {
     <BasePage>
       {videoOpen && <VideoPortal />}
       <Banner />
-      <Description /> <WhyUs />
-      {/* <Standing /> */}
+      <Description />
+      <Hosts />
+      <WhyUs />
       <Speakers />
       <Schedule />
       <Partners />

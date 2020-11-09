@@ -73,3 +73,7 @@
     transform: translateY(100%);
   }
 }
+
+.title {
+  @extend .baseTitle;
+}

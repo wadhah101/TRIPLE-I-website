@@ -1,7 +1,8 @@
 @import '../../../../styles/scss/shared.scss';
 
 .wrapper {
-  padding: 12vh 0;
+  padding-top: 12vh;
+
   @include md {
     width: 60%;
   }
@@ -19,10 +20,10 @@
 }
 
 .writing {
-  color: #000000a0;
-  line-height: 170%;
+  font-size: 1.125rem;
+  color: rgba($color: #000000, $alpha: 0.8);
+  line-height: 150%;
   margin-top: 0.75rem;
-
   strong {
     font-weight: 600;
     color: $main;
