@@ -21,7 +21,7 @@ const Banner: React.FunctionComponent = () => {
 
         <h2 className={styles.subtitle}>
           Industry, Innovation & Infrastructure <br />
-          November 22-2020
+          November 21-2020
         </h2>
 
         <div className={styles.interact}>
