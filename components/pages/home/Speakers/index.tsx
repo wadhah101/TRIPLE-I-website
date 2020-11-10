@@ -30,7 +30,7 @@ const afef = {
   firstName: 'Afef Bennani',
   lastName: 'Ben Abdelghani',
   position: 'Associate Professor (Maître de Conférences)',
-  picture: '/speakers/nader.webp',
+  picture: '/speakers/afef.webp',
   social: {
     fb: 'https://www.facebook.com/afef.bennani.7',
     linkedin: 'https://www.linkedin.com/in/afef-bennani-ben-abdelghani/',
