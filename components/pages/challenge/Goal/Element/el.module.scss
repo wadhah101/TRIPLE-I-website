@@ -5,7 +5,11 @@
   margin-bottom: 0.75rem;
   display: inline-block;
   position: relative;
-  font-size: 2.625rem;
+  font-size: 2rem;
+
+  @include md {
+    font-size: 2.625rem;
+  }
   font-weight: 700;
   color: $mainLight;
   text-shadow: 3px 3px $main;

@@ -3,7 +3,7 @@ import React from 'react'
 import BasePage from '../components/shared/BasePage'
 
 const NotFound: NextPage = () => {
-  return <BasePage> hello </BasePage>
+  return <BasePage></BasePage>
 }
 
 export default NotFound
