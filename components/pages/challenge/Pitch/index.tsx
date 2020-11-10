@@ -15,7 +15,7 @@ import SpecialCard from './SpecialCard'
 
 const Pitch: React.FunctionComponent = () => {
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
       <div className={styles.baseContainer}>
         {/* intro */}
         <h2 className={styles.title}>
@@ -87,7 +87,7 @@ const Pitch: React.FunctionComponent = () => {
         </ul>
         {/* part 2 */}
       </div>
-    </div>
+    </section>
   )
 }
 

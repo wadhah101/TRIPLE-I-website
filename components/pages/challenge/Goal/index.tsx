@@ -24,13 +24,13 @@ const arr = [goal, why, nextStep]
 
 const Goal: React.FunctionComponent = () => {
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
       <div className={styles.container}>
         {arr.map(({ title, text }) => (
           <Element key={title} text={text} title={title} />
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 
