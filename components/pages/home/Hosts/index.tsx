@@ -26,7 +26,7 @@ const Hosts: React.FunctionComponent = () => {
         {/* commite */}
         <div className={styles.commite}>
           <p className={styles.subtitle}> BROUGHT TO YOU BY OUR </p>
-          <h2 className={styles.baseTitle}> COMMITE </h2>
+          <h2 className={styles.baseTitle}> COMMITTEE </h2>
           <p className={styles.writing}>
             Led by 6 ambassadors from the initiative, ensuring the smooth
             running of the event&apos;s organization,{' '}
@@ -38,7 +38,7 @@ const Hosts: React.FunctionComponent = () => {
             which are the ENISo’s Student Branch and the INSAT’s Student Branch
             .
           </p>
-          <div className={styles.imageGrid}>
+          <div className={clsx(styles.imageGrid, styles.gr)}>
             {commite.map((e, ind) => (
               <a
                 rel="noreferrer"

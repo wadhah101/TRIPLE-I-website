@@ -63,7 +63,7 @@ const Partners: React.FunctionComponent = () => {
                 title={e.name}
                 onClick={() => track(`${e.name} link click`)}
               >
-                <div className={styles.imgContainer}>
+                <div className={styles.imgFilltoCenter}>
                   <img loading="lazy" alt={e.name} src={e.image} />
                 </div>
                 <h3> {e.name} </h3>

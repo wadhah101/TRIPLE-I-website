@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
           </p>
           <p className={styles.mail}>
             <fa.FaMailBulk />
-            <span>ieee.eniso.sb@gmail.com</span>
+            <span>sb.eniso@ieee.org</span>
           </p>
         </div>
       </div>

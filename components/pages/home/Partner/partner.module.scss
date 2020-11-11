@@ -17,6 +17,7 @@
   flex-direction: column;
   text-align: center;
   h3 {
+    letter-spacing: 1px;
     margin-top: 2rem;
     @include md {
       font-size: 1.5rem;
@@ -30,16 +31,17 @@
     color: $mainLight;
   }
 
-  .imgContainer {
-    flex: 1;
+  .imgFilltoCenter {
+    justify-content: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex: 1;
   }
 }
 
 .r {
   @include md {
+    column-gap: 5rem;
     row-gap: 5rem;
   }
 }

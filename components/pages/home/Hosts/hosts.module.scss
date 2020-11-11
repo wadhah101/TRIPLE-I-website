@@ -15,3 +15,10 @@
 .reduced {
   padding-top: 5rem;
 }
+
+.gr {
+  @include md {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 3rem;
+  }
+}
