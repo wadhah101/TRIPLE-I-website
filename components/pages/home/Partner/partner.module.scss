@@ -17,9 +17,9 @@
   flex-direction: column;
   text-align: center;
   h3 {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     @include md {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     font-size: 1.5rem;
     font-weight: 800;
@@ -30,19 +30,17 @@
     color: $mainLight;
   }
 
-  .imgFilltoCenter {
-    justify-content: center;
+  .imgContainer {
+    flex: 1;
     display: flex;
     align-items: center;
-    flex: 1;
+    justify-content: center;
   }
 }
 
-.commite .imageGrid {
+.r {
   @include md {
-    width: 80%;
-    margin: auto;
-    grid-template-columns: 1fr 1fr;
+    row-gap: 5rem;
   }
 }
 

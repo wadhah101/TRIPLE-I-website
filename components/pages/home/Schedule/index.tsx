@@ -1,22 +1,38 @@
 import * as React from 'react'
-import ScheduleElement, { IScheduleElement } from './Element'
+import ScheduleElement from './Element'
 import styles from './schedule.module.scss'
-import dayjs from 'dayjs'
+import dayjs, { Dayjs } from 'dayjs'
 
-const element: IScheduleElement = {
-  title: 'Kick start your career with IEEE INSAT',
-  text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum optio eius eveniet nihil at, eligendi quia blanditiis nam, libero corrupti ab quos. A eum dignissimos explicabo. Assumenda porro harum vero!`,
+class ScheduleData {
+  constructor(public title: string, public text: string) {}
 }
 
-const data = new Array<IScheduleElement>(4).fill(element)
-
-const mainArr = [
+const mainArr: { date: Dayjs[]; data: ScheduleData[] }[] = [
   {
     date: [dayjs('2018-11-14'), dayjs('2018-11-20')],
-    data,
+    data: [
+      new ScheduleData('“How to Pitch” workshop.', ''),
+      new ScheduleData('Proteus workshop.', ''),
+      new ScheduleData('Data Science workshop.', ''),
+      new ScheduleData(
+        '"Starting up as an aspiring entrepreneur" workshop.',
+        ''
+      ),
+      new ScheduleData(
+        'Robotics and Artificial Intelligence: Challenges and Perspectives workshop.',
+        ''
+      ),
+      new ScheduleData('More workshops to be announced soon.', ''),
+    ],
   },
-  { date: [dayjs('2018-11-21')], data },
-  { date: [dayjs('2018-11-22')], data },
+  {
+    date: [dayjs('2018-11-21')],
+    data: [new ScheduleData('Panel sessions.', '')],
+  },
+  {
+    date: [dayjs('2018-11-22')],
+    data: [new ScheduleData('Pitching day!', '')],
+  },
 ]
 
 const Schedule: React.FunctionComponent = () => {
