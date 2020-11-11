@@ -14,7 +14,7 @@ class Partner {
 const partners = [
   new Partner(
     'She Starts',
-    'https://www.shestarts.com/s',
+    'https://www.shestarts.com/',
     '/partners/she_starts.webp'
   ),
   new Partner(
