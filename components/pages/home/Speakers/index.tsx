@@ -2,6 +2,7 @@ import * as React from 'react'
 import styles from './speakers.module.scss'
 import { FaFacebookF, FaLinkedin } from 'react-icons/fa'
 import { useAnalytics } from 'use-analytics'
+import clsx from 'clsx'
 
 const nader = {
   firstName: 'Nader',
@@ -37,7 +38,18 @@ const afef = {
   },
 }
 
-const arr = [nader, ahlem, afef]
+const ahmed = {
+  firstName: 'Ahmed',
+  lastName: 'Ben Hamouda',
+  position:
+    'PMP®, CSM™, SPOC®, AgileExpert™, ITIL®, LSSBB, DMP Digital Agile Transformation & Start-Up Acceleration Expert',
+  picture: '/speakers/ahmed.webp',
+  social: {
+    fb: 'https://www.facebook.com/AhmedBenHamouda07',
+    linkedin: 'https://www.linkedin.com/in/benhamouda/',
+  },
+}
+const arr = [nader, ahlem, afef, ahmed]
 
 const Speakers: React.FunctionComponent = () => {
   const { track } = useAnalytics()
@@ -45,8 +57,8 @@ const Speakers: React.FunctionComponent = () => {
   return (
     <section className={styles.greyBg}>
       <div className={styles.container}>
-        <h2 className={styles.title}> speakers </h2>
-        <div className={styles.imageGrid}>
+        <h2 className={styles.title}> our juries </h2>
+        <div className={clsx(styles.imageGrid, styles.grid4)}>
           {arr.map((e, ind) => (
             <div className={styles.el} key={ind}>
               {/* images */}
