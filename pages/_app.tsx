@@ -22,6 +22,16 @@ export const appContext = createContext<IGlobalState>({
   setVideoOpen: null,
 })
 
+const stopScroll = (
+  <style>
+    {`
+body {
+overflow : hidden;
+}
+`}
+  </style>
+)
+
 const MyApp: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   const [videoOpen, setVideoOpen] = useState(false)
   return (
@@ -29,6 +39,7 @@ const MyApp: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => {
       <ThemeProvider theme={defaultTheme}>
         <AppHead />
         <Header />
+        {videoOpen && stopScroll}
         <appContext.Provider value={{ videoOpen, setVideoOpen }}>
           <Component {...pageProps} />
         </appContext.Provider>

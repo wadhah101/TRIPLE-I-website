@@ -18,3 +18,8 @@ h4,
 h5 {
   font-family: 'Playfair Display', sans-serif;
 } */
+
+/* WARNING ONLY USE FOR PROD */
+body {
+  overflow-x: hidden;
+}
