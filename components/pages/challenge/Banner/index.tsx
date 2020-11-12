@@ -11,8 +11,8 @@ const Banner: React.FunctionComponent = () => {
 
   return (
     <BannerWithImage imageUrl={imageUrl}>
-      <div className={styles.container}>
-        <h1 className={styles.title}>
+      <div className={styles.rContainer}>
+        <h1 className={styles.rTitle}>
           ARE YOU UP <br /> TO THE <br />
           <span className={styles.bigger}> CHALLENGE ?</span>
         </h1>
@@ -23,10 +23,7 @@ const Banner: React.FunctionComponent = () => {
           onClick={() => track('downloaded cdc')}
           className={styles.cdcButton}
         >
-          <span>
-            DOWNLOAD SPECIFICATIONS
-            <span style={{ whiteSpace: 'nowrap' }}>( CAHIER DE CHARGE )</span>
-          </span>
+          <span>DOWNLOAD SPECIFICATIONS (CAHIER DE CHARGE)</span>
           <fa.FaDownload />
         </a>
       </div>

@@ -80,7 +80,7 @@
   @include md {
     grid-template-columns: 1fr 1fr;
     padding: 0 1rem;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   gap: 1rem;
 }
@@ -90,4 +90,10 @@
     grid-template-columns: 1fr;
   }
   gap: 1.5rem;
+}
+
+.lastElFullWidth > *:last-child {
+  @include md {
+    grid-column: 1 / -1;
+  }
 }

@@ -1,21 +1,27 @@
 @import '../../../../styles/scss/shared';
 
 .title {
-  @include md {
-    font-size: 3.5rem;
-  }
-  font-size: 1.5rem;
   line-height: 130%;
   letter-spacing: 2px;
   font-weight: 700;
+  font-size: 6.5vw;
+  @include md {
+    font-size: 2.75rem;
+  }
+  @include xl {
+    font-size: 3.5rem;
+  }
 }
 
 .bigger {
+  line-height: 110%;
+  font-size: 18vw;
   @include md {
+    font-size: 5.25rem;
+  }
+  @include xl {
     font-size: 6.5rem;
   }
-  font-size: 3.5rem;
-  line-height: 110%;
 }
 
 .subtitle {
@@ -23,8 +29,13 @@
   margin-bottom: 1rem;
   font-size: 1.125rem;
   @include md {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  @include xl {
     margin-top: 0.75rem;
     margin-bottom: 2rem;
+
     font-size: 1.5rem;
   }
 }
@@ -68,5 +79,4 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-bottom: 5vh;
 }

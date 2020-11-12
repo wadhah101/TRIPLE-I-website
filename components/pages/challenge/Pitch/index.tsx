@@ -79,7 +79,7 @@ const Pitch: React.FunctionComponent = () => {
           {ngcIntro2}
         </p>
 
-        <ul className={clsx(styles.cardGrid, styles.flatten)}>
+        <ul className={clsx(styles.cardGrid, styles.lastElFullWidth)}>
           {ngcCards.map((e) => (
             <PitchCard key={e.title} title={e.title} text={e.text} />
           ))}
