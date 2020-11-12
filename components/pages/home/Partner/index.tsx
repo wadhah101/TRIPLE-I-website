@@ -67,6 +67,7 @@ const Partners: React.FunctionComponent = () => {
                   <img loading="lazy" alt={e.name} src={e.image} />
                 </div>
                 <h3> {e.name} </h3>
+                <div className={styles.sep} />
               </a>
             ))}
           </div>
