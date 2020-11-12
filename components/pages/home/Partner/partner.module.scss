@@ -69,4 +69,7 @@
     margin-top: 0;
     display: none;
   }
+  &:last-child {
+    display: none;
+  }
 }
