@@ -6,7 +6,7 @@ export interface IScheduleElement {
   text: string
 }
 
-const ScheduleElement: React.FunctionComponent<IScheduleElement> = ({
+const TimelineElement: React.FunctionComponent<IScheduleElement> = ({
   title,
   text,
 }) => {
@@ -18,4 +18,4 @@ const ScheduleElement: React.FunctionComponent<IScheduleElement> = ({
   )
 }
 
-export default ScheduleElement
+export default TimelineElement

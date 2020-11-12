@@ -1,7 +1,3 @@
-import * as React from 'react'
-import Element from './Element'
-import styles from './goal.module.scss'
-
 const goal = {
   title: 'OUR GOAL',
   text:
@@ -20,18 +16,4 @@ const nextStep = {
     'The growth of new industries means improvement in the standard of living for many of us. If industries pursue sustainability, this approach will have a positive effect on the environment (increased investment in renewable energy, recycling,.. ) and the quality of life for many people (smart cities, energy and resources efficiency,..) Investment in infrastructure and innovative ingenious solutions are crucial drivers of economic growth and development, as industry develops, it drives an increase of value addition and enhances the application of science, technology and innovation.',
 }
 
-const arr = [goal, why, nextStep]
-
-const Goal: React.FunctionComponent = () => {
-  return (
-    <section className={styles.wrapper}>
-      <div className={styles.container}>
-        {arr.map(({ title, text }) => (
-          <Element key={title} text={text} title={title} />
-        ))}
-      </div>
-    </section>
-  )
-}
-
-export default Goal
+export const INTRO_DATA = [goal, why, nextStep]

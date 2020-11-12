@@ -6,7 +6,7 @@ interface IPitchCardProps {
   text: string
 }
 
-const PitchCard: React.FunctionComponent<IPitchCardProps> = ({
+const PitchDescriptionCard: React.FunctionComponent<IPitchCardProps> = ({
   title,
   text,
 }) => {
@@ -18,4 +18,4 @@ const PitchCard: React.FunctionComponent<IPitchCardProps> = ({
   )
 }
 
-export default PitchCard
+export default PitchDescriptionCard

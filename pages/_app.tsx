@@ -7,7 +7,6 @@ import { defaultAnalytics } from '../lib/analytics'
 import React, { createContext, useState } from 'react'
 import AppHead from '../components/app/AppHead'
 import Header from '../components/app/Header'
-
 import '../styles/scss/index.scss'
 import Footer from '../components/app/Footer'
 

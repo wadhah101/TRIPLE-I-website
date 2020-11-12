@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styles from './sp.module.scss'
+import styles from './special.module.scss'
 
 const SpecialCard: React.FunctionComponent = () => {
   return (

@@ -8,12 +8,12 @@ import {
   ngcIntro2,
   roiCards,
   roiIntro,
-} from './data'
+} from './pitchCard.data'
 import styles from './pitch.module.scss'
-import PitchCard from './PitchCard'
-import SpecialCard from './SpecialCard'
+import PitchDescriptionCard from './PitchDescriptionCard/PitchCard'
+import SpecialCard from './PitchDescriptionCard/SpecialCard'
 
-const Pitch: React.FunctionComponent = () => {
+const PitchCompetition: React.FunctionComponent = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.baseContainer}>
@@ -51,7 +51,7 @@ const Pitch: React.FunctionComponent = () => {
         <p className={styles.intro}>{roiIntro}</p>
         <ul className={styles.cardGrid}>
           {roiCards.map((e) => (
-            <PitchCard key={e.title} title={e.title} text={e.text} />
+            <PitchDescriptionCard key={e.title} title={e.title} text={e.text} />
           ))}
         </ul>
         {/* part 1 */}
@@ -65,7 +65,7 @@ const Pitch: React.FunctionComponent = () => {
         <p className={styles.intro}>{iiotIntro}</p>
         <ul className={styles.cardGrid}>
           {iiotCard.map((e) => (
-            <PitchCard key={e.title} title={e.title} text={e.text} />
+            <PitchDescriptionCard key={e.title} title={e.title} text={e.text} />
           ))}
         </ul>
         {/* part 2 */}
@@ -81,7 +81,7 @@ const Pitch: React.FunctionComponent = () => {
 
         <ul className={clsx(styles.cardGrid, styles.lastElFullWidth)}>
           {ngcCards.map((e) => (
-            <PitchCard key={e.title} title={e.title} text={e.text} />
+            <PitchDescriptionCard key={e.title} title={e.title} text={e.text} />
           ))}
           <SpecialCard />
         </ul>
@@ -91,4 +91,4 @@ const Pitch: React.FunctionComponent = () => {
   )
 }
 
-export default Pitch
+export default PitchCompetition

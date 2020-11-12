@@ -1,8 +1,8 @@
 import { NextPage } from 'next'
 import React from 'react'
 import Banner from '../components/pages/challenge/Banner'
-import Goal from '../components/pages/challenge/Goal'
-import Pitch from '../components/pages/challenge/Pitch'
+import Goal from '../components/pages/challenge/Introduction'
+import PitchCompetition from '../components/pages/challenge/PitchCompetition'
 import BasePage from '../components/shared/BasePage'
 
 const challenge: NextPage = () => {
@@ -10,7 +10,7 @@ const challenge: NextPage = () => {
     <BasePage>
       <Banner />
       <Goal />
-      <Pitch />
+      <PitchCompetition />
     </BasePage>
   )
 }

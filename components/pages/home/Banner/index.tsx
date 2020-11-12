@@ -3,7 +3,7 @@ import * as React from 'react'
 import { FaYoutube } from 'react-icons/fa'
 import { appContext } from '../../../../pages/_app'
 import BannerWithImage from '../../../template/BannerWithImage'
-import styles from './Banner.module.scss'
+import styles from './style.module.scss'
 import { useAnalytics } from 'use-analytics'
 
 const Banner: React.FunctionComponent = () => {

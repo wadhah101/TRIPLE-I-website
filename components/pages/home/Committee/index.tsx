@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styles from './hosts.module.scss'
+import styles from './style.module.scss'
 import { useAnalytics } from 'use-analytics'
 import clsx from 'clsx'
 
@@ -17,7 +17,7 @@ const insat = {
 
 const commite = [insat, eniso]
 
-const Hosts: React.FunctionComponent = () => {
+const Committee: React.FunctionComponent = () => {
   const { track } = useAnalytics()
 
   return (
@@ -61,4 +61,4 @@ const Hosts: React.FunctionComponent = () => {
   )
 }
 
-export default Hosts
+export default Committee
