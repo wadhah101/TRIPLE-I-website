@@ -54,21 +54,23 @@ const Partners: React.FunctionComponent = () => {
           <h2 className={styles.smallerTitle}> PARTNERS </h2>
           <div className={clsx(styles.imageGrid, styles.r)}>
             {partners.map((e, ind) => (
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href={e.href}
-                className={styles.el}
-                key={ind}
-                title={e.name}
-                onClick={() => track(`${e.name} link click`)}
-              >
-                <div className={styles.imgFilltoCenter}>
-                  <img loading="lazy" alt={e.name} src={e.image} />
-                </div>
-                <h3> {e.name} </h3>
+              <React.Fragment key={ind}>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href={e.href}
+                  className={styles.el}
+                  key={ind}
+                  title={e.name}
+                  onClick={() => track(`${e.name} link click`)}
+                >
+                  <div className={styles.imgFilltoCenter}>
+                    <img loading="lazy" alt={e.name} src={e.image} />
+                  </div>
+                  {/* <h3> {e.name} </h3> */}
+                </a>
                 <div className={styles.sep} />
-              </a>
+              </React.Fragment>
             ))}
           </div>
         </div>
