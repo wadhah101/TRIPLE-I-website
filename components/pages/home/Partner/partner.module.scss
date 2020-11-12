@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  transition: filter ease 0.4s;
   h3 {
     letter-spacing: 1px;
     margin-top: 2rem;
@@ -36,6 +37,10 @@
     display: flex;
     align-items: center;
     flex: 1;
+  }
+
+  &:hover {
+    filter: opacity(70%);
   }
 }
 

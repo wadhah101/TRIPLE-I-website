@@ -24,7 +24,7 @@ const Hosts: React.FunctionComponent = () => {
     <section className={clsx(styles.wrapper, styles.reduced)}>
       <div className={styles.container}>
         {/* commite */}
-        <div className={styles.commite}>
+        <div>
           <p className={styles.subtitle}> BROUGHT TO YOU BY OUR </p>
           <h2 className={styles.baseTitle}> COMMITTEE </h2>
           <p className={styles.writing}>
