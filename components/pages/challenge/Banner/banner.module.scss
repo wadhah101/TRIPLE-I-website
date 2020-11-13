@@ -23,6 +23,14 @@
 .rTitle {
   @extend .title;
   font-size: 7vw;
+
+  @include md {
+    font-size: 2.75rem;
+  }
+  @include xl {
+    font-size: 3.5rem;
+  }
+
   .bigger {
     font-size: 11.5vw;
     @include md {

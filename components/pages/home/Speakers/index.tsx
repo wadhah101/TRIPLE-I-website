@@ -64,7 +64,6 @@ const Speakers: React.FunctionComponent = () => {
               {/* images */}
               <div className={styles.elImage}>
                 <img
-                  loading="lazy"
                   alt={`${e.firstName} ${e.lastName} picture`}
                   src={e.picture}
                 />

@@ -5,8 +5,11 @@ import styles from './whyus.module.scss'
 
 const arr = [
   { title: 'experience speaks', text: placeholder },
-  { title: 'international reach', text: placeholder },
-  { title: 'community driven', text: placeholder },
+  { title: ' reach', text: placeholder },
+  {
+    title: 'community driven',
+    text: `Community-based entrepreneurship is considered an important instrument for the realization of potential among marginal and deprived communities isolated from the mainstream economy and is necessary for bringing social upliftment. Cultural values, shared resources, linkages, and mutual trust work for the community, nurtured through close personal relations for the functioning of economic activities. Entrepreneurial activities creating local public goods for a community have a comparative advantage over the absolute market-oriented activities.`,
+  },
 ]
 
 const WhyUs: React.FunctionComponent = () => {

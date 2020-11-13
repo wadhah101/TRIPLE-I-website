@@ -40,6 +40,12 @@ const partners = [
     'https://ias.ieee.tn/',
     '/partners/ias-sc.webp'
   ),
+
+  new Partner(
+    'INSAT startup nation',
+    'https://www.facebook.com/InsatStartupNation',
+    '/partners/isn.webp'
+  ),
 ]
 
 const Partners: React.FunctionComponent = () => {
@@ -65,7 +71,7 @@ const Partners: React.FunctionComponent = () => {
                   onClick={() => track(`${e.name} link click`)}
                 >
                   <div className={styles.imgFilltoCenter}>
-                    <img loading="lazy" alt={e.name} src={e.image} />
+                    <img alt={e.name} src={e.image} />
                   </div>
                   {/* <h3> {e.name} </h3> */}
                 </a>

@@ -50,7 +50,7 @@ const Committee: React.FunctionComponent = () => {
                 onClick={() => track(`${e.name} link click`)}
               >
                 <div className={styles.imgFilltoCenter}>
-                  <img loading="lazy" alt={e.name} src={e.image} />
+                  <img alt={e.name} src={e.image} />
                 </div>
               </a>
             ))}

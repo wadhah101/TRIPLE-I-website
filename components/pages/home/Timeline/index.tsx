@@ -7,7 +7,7 @@ const Timeline: React.FunctionComponent = () => {
   return (
     <section className={styles.greyBg}>
       <div className={styles.container}>
-        <h2 className={styles.baseTitle}> Schedule </h2>
+        <h2 className={styles.baseTitle}> Timeline </h2>
         <ul className={styles.arr}>
           {TIMELINE_ARR.map(({ date, data }, id) => (
             <li className={styles.el} key={id}>
