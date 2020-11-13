@@ -1,14 +1,19 @@
 import clsx from 'clsx'
 import * as React from 'react'
-import { placeholder } from '../../../../pages/_app'
 import styles from './whyus.module.scss'
 
 const arr = [
-  { title: 'experience speaks', text: placeholder },
-  { title: ' reach', text: placeholder },
+  {
+    title: 'Proven expertise',
+    text: `This summit will feature multiple testimonials and experiences shared by infrastructure experts and industry specialists in various fields, who will be speaking during the event, and sharing their expertise in various talks (Big Data, Blockchain, Robotics, E-health, Fintech, Agritech)`,
+  },
+  {
+    title: 'national reach',
+    text: `Our competition will bring along teams from the many parts of Tunisia , all having the same goal. The winner will qualify to international summit and have a chance to have his dream-project started`,
+  },
   {
     title: 'community driven',
-    text: `Community-based entrepreneurship is considered an important instrument for the realization of potential among marginal and deprived communities isolated from the mainstream economy and is necessary for bringing social upliftment. Cultural values, shared resources, linkages, and mutual trust work for the community, nurtured through close personal relations for the functioning of economic activities. Entrepreneurial activities creating local public goods for a community have a comparative advantage over the absolute market-oriented activities.`,
+    text: `We believe that entrepreneurship is considered an important instrument to realize the potential among deprived communities isolated from the mainstream economy . Cultural values, shared resources, and mutual trust work for the community.`,
   },
 ]
 
