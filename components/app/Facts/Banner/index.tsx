@@ -26,10 +26,19 @@ const FactsBanner: React.FunctionComponent = () => {
               A special word from the R8 Entrepreneurship Committe Co-founder
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-              doloribus quisquam voluptates quis eaque sint neque commodi maxime
-              nostrum odit, atque cum ea mollitia sequi rerum earum. Iste,
-              quibusdam eaque!
+              Mohamed El Dallal is a Computer and Communication Engineer, MBA
+              holder specialized in International Business. He is also working
+              on researches in the digital marketing field. He is a serial
+              Entrepreneur currently the Co-founder and CEO of Innovideas LLC
+              for a marketing and advertising agency, Co-founder of Dcodes LLC
+              for software solutions, and Co-founder and board member of Techne
+              Summit. Mohamed is also an avid volunteer, participating with
+              several NGOs, project, and youth initiatives both inside and
+              outside of Egypt since 2009. He has been a volunteer in IEEE since
+              2010 serving in a different position locally and regionally, He is
+              the former Vice-Chair of IEEE Young Professionals MGA, the
+              co-founder and team leader of the IEEE REGION 8 ENTREPRENEURSHIP
+              INITIATIVE, and a Global Shaper.
             </p>
           </div>
         </div>
