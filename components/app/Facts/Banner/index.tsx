@@ -16,7 +16,10 @@ const FactsBanner: React.FunctionComponent = () => {
     >
       <div className={styles.baseContainer}>
         <div
-          className={clsx('grid gap-x-6 gap-y-4', styles['grid-colums-1-2-3'])}
+          className={clsx(
+            'grid items-center gap-x-6 gap-y-4',
+            styles['grid-colums-1-2-3']
+          )}
         >
           <div onClick={() => track('region 8 vid')}>
             <FactsVideo />
@@ -38,7 +41,7 @@ const FactsBanner: React.FunctionComponent = () => {
               2010 serving in a different position locally and regionally, He is
               the former Vice-Chair of IEEE Young Professionals MGA, the
               co-founder and team leader of the IEEE REGION 8 ENTREPRENEURSHIP
-              INITIATIVE, and a Global Shaper.
+              INITIATIVE.
             </p>
           </div>
         </div>
