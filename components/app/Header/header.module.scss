@@ -14,7 +14,17 @@
   }
 }
 
+header.whiteBg {
+  background: white;
+  * {
+    color: black;
+  }
+}
+
 header.white {
+  * {
+    color: white;
+  }
   background: #000000ee;
   position: fixed;
   @include md {

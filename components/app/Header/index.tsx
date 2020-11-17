@@ -8,10 +8,12 @@ import clsx from 'clsx'
 import * as fi from 'react-icons/fi'
 import { useOnClickOutside } from '../../../lib/onClickOutsideHook'
 import { useAnalytics } from 'use-analytics'
+import { withRouter } from 'next/router'
+import { WithRouterProps } from 'next/dist/client/with-router'
 
-const Header: React.FunctionComponent = () => {
+const Header: React.FunctionComponent<WithRouterProps> = ({ router }) => {
   const { track } = useAnalytics()
-  const [white, setWhite] = React.useState(false)
+  const [solidBackground, setSolidBackground] = React.useState(false)
   const [open, setOpen] = React.useState(false)
   const ref = React.useRef<HTMLTableHeaderCellElement>(null)
   useOnClickOutside(ref, () => {
@@ -27,11 +29,11 @@ const Header: React.FunctionComponent = () => {
         ? window.innerHeight * 0.75
         : window.innerHeight * 0.5
 
-    function doSomething(scroll_pos: number) {
-      if (scroll_pos > tripping && !white) {
-        setWhite(true)
-      } else if (scroll_pos <= tripping && white) {
-        setWhite(false)
+    function handler(scroll_pos: number) {
+      if (scroll_pos > tripping && !solidBackground) {
+        setSolidBackground(true)
+      } else if (scroll_pos <= tripping && solidBackground) {
+        setSolidBackground(false)
       }
     }
 
@@ -39,18 +41,24 @@ const Header: React.FunctionComponent = () => {
       last_known_scroll_position = window.scrollY
       if (!ticking) {
         window.requestAnimationFrame(function () {
-          doSomething(last_known_scroll_position)
+          handler(last_known_scroll_position)
           ticking = false
         })
         ticking = true
       }
     })
-  }, [white])
+  }, [solidBackground])
 
   return (
     <header
       ref={ref}
-      className={clsx({ [styles.white]: white || open }, styles.header)}
+      className={clsx(
+        { [styles.white]: solidBackground || open },
+        {
+          [styles.whiteBg]: router.pathname === '/facts' && !open,
+        },
+        styles.header
+      )}
     >
       <div className={styles.container}>
         <Link passHref href="/">
@@ -93,4 +101,4 @@ const Header: React.FunctionComponent = () => {
   )
 }
 
-export default Header
+export default withRouter(Header)

@@ -10,6 +10,10 @@ const AppHead: React.FunctionComponent = () => {
       <link rel="icon" type="image/webp" href="/favicon.webp" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="Description" content={headDescription} />
+      <meta
+        name="Author"
+        content="wadhah mahrouk https://www.linkedin.com/in/wadhah-mahroug-392a40184/"
+      />
     </Head>
   )
 }
