@@ -58,6 +58,16 @@ const Partners: React.FunctionComponent = () => {
         <div>
           <p className={styles.subtitle}> SPECIAL THANKS TO OUR </p>
           <h2 className={styles.smallerTitle}> PARTNERS </h2>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href={'https://www.novationcity.com/'}
+            className={clsx(styles.el, 'flex flex-col items-center mb-16')}
+            title={'novation city'}
+            onClick={() => track(`novation city link click`)}
+          >
+            <img alt="novation city picture" src="/partners/novation.webp" />
+          </a>
           <div className={clsx(styles.imageGrid, styles.r)}>
             {partners.map((e, ind) => (
               <React.Fragment key={ind}>
