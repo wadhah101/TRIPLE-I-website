@@ -57,8 +57,8 @@ const Speakers: React.FunctionComponent = () => {
   return (
     <section className={styles.greyBg}>
       <div className={styles.container}>
-        <h2 className={styles.title}> our juries </h2>
-        <div className={clsx(styles.imageGrid, styles.grid4)}>
+        <h2 className={styles.baseTitle}> our juries </h2>
+        <div className="grid gap-y-8 md:grid-cols-4 gap-x-4">
           {arr.map((e, ind) => (
             <div className={styles.el} key={ind}>
               {/* images */}
@@ -67,7 +67,13 @@ const Speakers: React.FunctionComponent = () => {
                   alt={`${e.firstName} ${e.lastName} picture`}
                   src={e.picture}
                 />
-                <div className={styles.elSocial}>
+                {/* social element */}
+                <div
+                  className={clsx(
+                    'absolute bottom-0 z-10 grid items-center justify-center w-full grid-flow-col-dense gap-4 py-3 text-2xl text-white transition duration-200 transform bg-black bg-opacity-75 md:translate-y-full',
+                    styles.appear
+                  )}
+                >
                   <a
                     title="linkedin link"
                     href={e.social.linkedin}
@@ -87,6 +93,7 @@ const Speakers: React.FunctionComponent = () => {
                     <FaFacebookF />
                   </a>
                 </div>
+                {/* social elements */}
               </div>
               {/* images */}
               <h3>

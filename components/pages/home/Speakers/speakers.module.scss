@@ -28,19 +28,12 @@
     color: #00000080;
   }
 
-  &:hover .elSocial {
+  &:hover .appear {
     transform: translateY(0);
   }
 
   &:hover img {
     filter: grayscale(0);
-  }
-}
-
-.grid4 {
-  column-gap: 1rem;
-  @include md {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -55,29 +48,4 @@
       filter: grayscale(1);
     }
   }
-}
-
-.elSocial {
-  position: absolute;
-  color: white;
-  bottom: 0;
-  width: 100%;
-  background: #00000080;
-  padding: 0.75rem 0;
-  z-index: 5;
-  transition: transform ease-in-out 0.2s;
-  grid-auto-flow: column dense;
-  font-size: 1.5rem;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-
-  @include md {
-    transform: translateY(100%);
-  }
-}
-
-.title {
-  @extend .baseTitle;
 }
