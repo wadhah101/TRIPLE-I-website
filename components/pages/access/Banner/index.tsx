@@ -144,7 +144,7 @@ const AccessBanner: React.FunctionComponent = () => {
               rel="noreferrer"
               className={clsx(
                 { [styles.disabled]: !isPitchMoment },
-                'grid justify-center items-center grid-flow-col-dense gap-2 w-full px-12 py-2 mt-3 font-bold duration-300 rounded-md shadow md:w-auto hover:bg-main-500 bg-main-400'
+                'grid justify-center items-center grid-flow-col-dense gap-2 w-full px-8 py-2 mt-3 font-bold duration-300 rounded-md shadow md:w-auto hover:bg-main-500 bg-main-400'
               )}
             >
               <fa.FaExternalLinkAlt />
