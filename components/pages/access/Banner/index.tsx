@@ -17,7 +17,7 @@ const AccessBanner: React.FunctionComponent = () => {
           THE EVENT HAS CONCLUDED
         </h1>
         <h2 className="font-bold md:text-3xl">
-          BUT MORE IS YET TO COME <br /> # IEEE INSAT # IEEE ENISO
+          BUT MORE IS YET TO COME <br /> # IEEE INSAT &nbsp; # IEEE ENISO
         </h2>
       </div>
     </BannerWithImage>
